@@ -4,6 +4,16 @@
     margin: 0;
 }
 
+html
+    ,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 body {
     background-image: url(clean-textile.png);
 }
@@ -154,7 +164,7 @@ li:nth-of-type(3):hover a:after {
     li:nth-of-type(1) a:after {
         top: -20px;
         left: 0; 
-        right: 0;
+        right: -10px;
         opacity: 1;
     }
     
@@ -162,22 +172,23 @@ li:nth-of-type(3):hover a:after {
 
         top: -20px;
         left: 0; 
-        right: 0; 
+        right: -5px; 
         opacity: 1;
     }
     
     li:nth-of-type(3) a:after {
         top: -20px;
         left: 0; 
-        right: 0;
+        right: -5px;
         opacity: 1;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     header {
         flex-direction: column;
+        align-items: center;
     }
 
     a {
@@ -195,6 +206,7 @@ li:nth-of-type(3):hover a:after {
     nav {
         margin-top: -50px;
         width: 100%;
+        margin-right: 0;
     }
 
         li a:before {
