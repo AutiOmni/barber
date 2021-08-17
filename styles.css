@@ -42,6 +42,16 @@ header {
     align-items: center;
 }
 
+.logo {
+    position: relative;
+    text-align: center;
+}
+
+.logo-name {
+    width: 100%;
+    display: none;
+}
+
 .logo img {
     height: 250px;
     width: 300px;
@@ -189,6 +199,12 @@ li:nth-of-type(3):hover a:after {
         align-items: center;
     }
 
+    .logo-name {
+        display: block;
+        position:absolute;
+        top: 175px;
+    }
+
     a {
         font-size: 1em;
         margin-top: 5px;
@@ -205,12 +221,12 @@ li:nth-of-type(3):hover a:after {
     .logo img {
         height: 300px;
         width: 400px;
-        margin-top: -40px;
-        margin-left: 4%;
+        margin-top: -50px;
+        margin-left: 0%;
     }
 
     nav {
-        margin-top: -50px;
+        margin-top: -25px;
         width: 100%;
         margin-right: 0;
     }
