@@ -37,10 +37,10 @@ a:hover {
 
 header {
     width: 100vw;
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
@@ -59,7 +59,7 @@ header {
     width: 100%;
     text-align: center;
     font-size: 2.5rem;
-    margin-top: 25px;
+    margin-top: -60px;
     white-space: nowrap;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2.5px;
@@ -69,12 +69,12 @@ header {
     height: 350px;
     width: 450px;
     object-fit: cover;
-    margin-top: 135px;
+    margin-top: -60px;
 }
 
 nav {
     width: 50%;
-    height: 100%;
+    height: 100px;
     margin-right: 5%;
 }
 
@@ -174,6 +174,40 @@ li:nth-of-type(3):hover a:after {
     opacity: 1;
 }
 
+/* ------------------ SECTION ----------------------- */
+
+section {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: calc(100% - 200px);
+}
+
+.appointment {
+    transition: all ease 1000ms;
+    opacity: 0;    
+    background-image: url('https://images.pexels.com/photos/3162022/pexels-photo-3162022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+}
+
+.gallery {
+    opacity: 0;    
+    transition: all ease 1000ms;
+    background-image: url('https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+}
+
+.about {
+    opacity: 0;    
+    transition: all ease 1000ms;
+    background-image: url('https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
+}
+
+.active-sect {
+    opacity: 1;
+}
+
+/* ------------------ @MEDIA ----------------------- */
+
+
 @media (max-width: 850px) {
 
     a {
@@ -218,6 +252,11 @@ li:nth-of-type(3):hover a:after {
         right: -5px;
         opacity: 1;
     }
+
+    section {
+        height: calc(100% - 190px);
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -262,6 +301,10 @@ li:nth-of-type(3):hover a:after {
         width: 100%;
         margin-right: 0;
     }
-
+    
+    section {
+        height: calc(100% - 300px);
+    }
 
 }
+
