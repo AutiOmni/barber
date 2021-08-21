@@ -51,11 +51,11 @@ header {
     display: none;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2.5px;
-    background-color: #000;
     background-image: url(clean-textile.png);
     background-repeat: repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-color: #000;
 }
 
 .logo-name-nav {
@@ -458,10 +458,6 @@ label {
 
     .form-title {
         background-color: #fff; 
-        background-image: url(clean-textile.png);
-        background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     .appointment-form,
