@@ -415,7 +415,7 @@ label {
     }
 
     .logo-name {
-        display: block;
+        display: inline-block;
         grid-row: 3/4; 
         grid-column: 1/3;
         width: 100%;
