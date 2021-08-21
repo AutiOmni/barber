@@ -257,6 +257,7 @@ li:nth-of-type(3) .active-link:after {
     justify-self: center;
     height:90%;
     width: 90%;
+    border: 1px solid #000;
 }
 
 .appointment-img img {
@@ -291,6 +292,7 @@ input,
 
 input[type=date] {
     padding: 7px;
+    background-image: none;
 }
 
 label {
