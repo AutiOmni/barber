@@ -456,11 +456,6 @@ label {
         justify-self: center;
         align-self: end;
         text-align: center;
-        background-image: url(clean-textile.png);
-        background-repeat: repeat;
-        -webkit-background-clip: text;
-        color: transparent;
-        background-color: #000;
     }
 
     .logo-name-nav {
