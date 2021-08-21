@@ -28,6 +28,8 @@ hr {
     border-bottom: none;
 }
 
+/* ----------------------------- HEADER ----------------------------------- */
+
 header {
     width: 100vw;
     height: 200px;
@@ -71,6 +73,9 @@ header {
     object-position: center;
     margin-top: -60px;
 }
+
+/* ----------------------------- NAV ----------------------------------- */
+
 
 nav {
     grid-column: 2/3;
@@ -175,13 +180,13 @@ li:nth-of-type(3):hover a:after {
     opacity: 1;
 }
 
-/* ------------------ SECTION ----------------------- */
+/* ------------------ SECTION ---------------------------------------------------- */
 
 section {
     position: absolute;
     height: calc(100% - 200px);
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .appointment {
@@ -205,7 +210,7 @@ section {
     background-image: url('https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
 }
 
-/* ------------------ SECTION ADDING AND HOVER EFFECT STAY ----------------------- */
+/* ------------------ SECTION ADDING AND HOVER EFFECT STAY ------------------------------- */
 
 .active-sect {
     opacity: 1;
@@ -224,7 +229,7 @@ li:nth-of-type(3) .active-link:after {
     opacity: 1;
 }
 
-/* ------------------ APPOINTMENTS ----------------------- */
+/* ------------------ APPOINTMENTS --------------------------------------------------------- */
 
 .form-title {
     width: 100%;
@@ -258,7 +263,7 @@ li:nth-of-type(3) .active-link:after {
 form div {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 input,
@@ -266,13 +271,23 @@ input,
     margin: 10px;
     padding: 10px;
     font-size: 1.25rem;
+    width: 100%;
 }
+
 input[type=date] {
-    padding: 6px;
+    padding: 7px;
 }
 
 label {
     margin-bottom: 5px;
+}
+
+.divided-form-cont {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .date-cont {
@@ -280,6 +295,8 @@ label {
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    width: 50%;
+    border: 1px solid black;
 }
 
 .drink-selection-cont {
@@ -287,6 +304,8 @@ label {
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    width: 50%;
+    border: 1px solid black;
 }
 
 
@@ -345,6 +364,18 @@ label {
         opacity: 1;
     }
 
+    .divided-form-cont {
+        flex-direction: column;
+    }
+
+    .date-cont {
+        width: 100%;
+    }
+    
+    .drink-selection-cont {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -371,7 +402,6 @@ label {
     .logo img {
         margin-top: -40px;
     }
-
 
     .logo-name {
         display: block;
@@ -415,5 +445,30 @@ label {
         margin-left: 5%;
     }
 
+    .contact-form-cont,
+        .name-form-cont {
+            flex-direction: column;
+    }
+
+    label {
+        font-size: .75rem;
+    }
+
+    input[type=date] {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    input[type=date] {
+        width: 75%;
+    }
+}
+
+@media (max-width: 375px) {
+    input[type=date] {
+        width: 70%;
+    }
 }
 

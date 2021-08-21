@@ -39,12 +39,12 @@
                     <form action="">
                         
 
-                            <div>
+                            <div class="name-form-cont">
                             <input type="text" name="first-name" placeholder="First Name" required pattern="\w+" maxlength="25">
                             <input type="text" name="last-name" placeholder="Last Name" required pattern="\w" maxlength="25">
                             </div>
 
-                            <div>
+                            <div class="contact-form-cont">
                                 <input type="tel" name="phone-number" required placeholder="Phone Number" pattern="(\d?){1}(\s?|\W?){1}(\d){3}(\s?|\W?){1}(\d){3}(\s?|\W?){1}(\d){4}$">
                                 <input type="email" name="email" required placeholder="Email">
                             </div>
@@ -61,9 +61,11 @@
                             </div> 
 
                             <div class="drink-selection-cont">
+                                
                                 <div>
                                     <label for="preferred-beer">Preferred Drink: </label>
                                 </div>
+
                                 <div>
                                     <select name="drink-choice" id="drink-choice">
                                         <option value="">Ale (Barber's Choice)</option>
@@ -83,7 +85,9 @@
                                         <option value="">Cider</option>
                                     </select>
                                 </div>
+                                
                             </div>
+
                         </div>
                     </form>
 
