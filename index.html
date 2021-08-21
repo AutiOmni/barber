@@ -15,13 +15,12 @@
         <header>
             <div class="logo">
                 <img src="hoppyBarberLogo.png" alt="Hoppy Barber Logo">
-                <h1 class="logo-name">The Hoppy Barber
-                    <hr>
-                </h1>
             </div>
-
+            <h1 class="logo-name">The Hoppy Barber
+                <hr>
+            </h1>
+            <h1 class="logo-name-nav">The Hoppy Barber <hr> </h1>
             <nav>
-                <h1 class="logo-name-nav">The Hoppy Barber <hr> </h1>
                 <ul>
                     <li><a id="appointment" href="#">Appointments</a></li>
                     <li><a id="gallery" href="#">Gallery</a></li>
@@ -33,6 +32,66 @@
        <main>
 
         <section class="appointment">
+
+            <div class="appointment-form">
+                <h2 class="form-title">Contact Information</h2>
+
+                    <form action="">
+                        
+
+                            <div>
+                            <input type="text" name="first-name" placeholder="First Name" required pattern="\w+" maxlength="25">
+                            <input type="text" name="last-name" placeholder="Last Name" required pattern="\w" maxlength="25">
+                            </div>
+
+                            <div>
+                                <input type="tel" name="phone-number" required placeholder="Phone Number" pattern="(\d?){1}(\s?|\W?){1}(\d){3}(\s?|\W?){1}(\d){3}(\s?|\W?){1}(\d){4}$">
+                                <input type="email" name="email" required placeholder="Email">
+                            </div>
+
+                        <div class="divided-form-cont">
+
+                            <div class="date-cont">
+                                <div>
+                                    <label for="appointment-date">Preferred Appointment Date: </label>
+                                </div>
+                                <div>
+                                    <input type="date" name="appointment-date" required>
+                                </div>
+                            </div> 
+
+                            <div class="drink-selection-cont">
+                                <div>
+                                    <label for="preferred-beer">Preferred Drink: </label>
+                                </div>
+                                <div>
+                                    <select name="drink-choice" id="drink-choice">
+                                        <option value="">Ale (Barber's Choice)</option>
+                                        <option value="">Pale Ale</option>
+                                        <option value="">IPA</option>
+                                        <option value="">Imperial</option>
+                                        <option value="">Blond Ale</option>
+                                        <option value="">Brown Ale</option>
+                                        <option value="">Wheat</option>
+                                        <option value="">Stout</option>
+                                        <option value="">Lager (Barber's Choice)</option>
+                                        <option value="">Pilsner</option>
+                                        <option value="">Helles Lager</option>
+                                        <option value="">Kölsch Lager</option>
+                                        <option value="">Vienna Lager</option>
+                                        <option value="">Mexican Lager</option>
+                                        <option value="">Cider</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+            </div>
+
+            <div class="appointment-img">
+                <img src="https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Barber Shop Image">
+            </div>
 
         </section>
 
