@@ -1,12 +1,29 @@
 $('#appointment').click(function() {
     $(this).toggleClass('active-link')
+
+ // CHECKS FOR PROPER ANIMATION   
+if ($(".appointment").hasClass('active-sect')) {
+// THIS IS FOR STYLISTIC REMOVAL OF SECTION
+$('.appointment').addClass('active-bye')
+
+setTimeout(function() {
+    $('.appointment').removeClass('active-sect');
+}, 250)
+
+setTimeout(function() {  
+    $('.appointment').removeClass('active-bye');   
+}, 750)
+
+}
+
 // BRINGS UP CURRENT SECTION
-    $('.appointment').toggleClass('active-sect');
+    $('.appointment').addClass('active-sect');
 // REMOVES OTHER SECTION ACTIVES
     $('.gallery').removeClass('active-sect');
     $('.about').removeClass('active-sect');
     $('#gallery').removeClass('active-link');
     $('#about').removeClass('active-link');
+
 });
 
 $('#gallery').click(function() {

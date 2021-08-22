@@ -10,6 +10,7 @@ html,
     margin: 0px;
     padding: 0px;
     font-family: 'Raleway', sans-serif;
+    overflow: hidden;
 }
 
 body {
@@ -193,6 +194,7 @@ section {
     height: calc(100% - 200px);
     width: 100vw;
     overflow-x: hidden;
+    transform: translateY(100%);
 }
 
 .appointment {
@@ -200,8 +202,8 @@ section {
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 1fr 1fr;
-    transition: all ease 1000ms;
-    opacity: 0;    
+    transition: all ease 1000ms;  
+    opacity: 0;
 }
 
 .gallery {
@@ -221,6 +223,7 @@ section {
 .active-sect {
     opacity: 1;
     z-index: 99;
+    transform: translateY(0%);
 }
 
 li:nth-of-type(1) .active-link:after {
@@ -254,6 +257,7 @@ li:nth-of-type(3) .active-link:after {
     height:95%;
     width: 95%;
     border: 1px solid #000;
+    transition: all ease 750ms;
 }
 
 .appointment-img img {
@@ -266,6 +270,7 @@ li:nth-of-type(3) .active-link:after {
 .appointment-form {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    transition: all ease 750ms;
 }
 
 form div {
@@ -317,8 +322,17 @@ label {
     flex-direction: column;
 }
 
+/* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
 
+    .active-bye .appointment-form {
+        transform: translate(150%, 0%);
+        opacity: 0;
+    }
 
+    .active-bye .appointment-img {
+        transform: translate(-150%, 0%);
+        opacity: 0;
+    }
 
 /* ------------------ @MEDIA ----------------------- */
 
@@ -505,6 +519,7 @@ label {
         width: 100%;
         height: 100%;
     }
+
 
     label {
         font-size: 1.15rem;
