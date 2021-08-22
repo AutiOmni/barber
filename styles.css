@@ -112,7 +112,7 @@ li a {
     text-align: center;
 }
 
-li a::before {
+li a:before {
     position: absolute;
     content: '';
     background-color: #000;
@@ -238,14 +238,10 @@ li:nth-of-type(3) .active-link:after {
 /* ------------------ APPOINTMENTS --------------------------------------------------------- */
 
 .form-title {
+    color: #000;
     width: 100%;
     text-align: center;
     margin: 15px 0px;
-    background-color: #000;
-    background-image: url(clean-textile.png);
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    color: transparent;
 }
 
 .appointment-img {
@@ -492,7 +488,8 @@ label {
     }
 
     .form-title {
-        background-color: #fff; 
+        color: #fff; 
+        text-shadow: -1px 0px 1px #000;
     }
 
     .appointment-form,
@@ -512,6 +509,7 @@ label {
     label {
         font-size: 1.15rem;
         color: #fff;
+        text-shadow: 1px 1px 1px #000;
     }
 
     input[type=date] {
