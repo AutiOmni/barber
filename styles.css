@@ -202,19 +202,19 @@ section {
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 1fr 1fr;
-    transition: all ease 1000ms;  
+    transition: all ease 750ms;  
     opacity: 0;
 }
 
 .gallery {
     opacity: 0;    
-    transition: all ease 1000ms;
+    transition: all ease 750ms;
     background-image: url('https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
 }
 
 .about {
     opacity: 0;    
-    transition: all ease 1000ms;
+    transition: all ease 750ms;
     background-image: url('https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
 }
 
@@ -325,13 +325,13 @@ label {
 /* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
 
     .active-bye .appointment-form {
-        transform: translate(150%, 0%);
-        opacity: 0;
+        opacity: 0; 
+        transform: translate(500%, 0%);
     }
 
     .active-bye .appointment-img {
-        transform: translate(-150%, 0%);
-        opacity: 0;
+        opacity: 0; 
+        transform: translate(-500%, 0%);
     }
 
 /* ------------------ @MEDIA ----------------------- */
