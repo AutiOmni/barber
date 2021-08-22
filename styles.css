@@ -518,6 +518,15 @@ label {
         height: 100%;
     }
 
+    .active-bye .appointment-form {
+        opacity: 0;
+        transform: translate(0%, 0%);
+    }
+
+    .active-bye .appointment-img {
+        opacity: 0;
+        transform: translate(-0%, 0%);
+    }
 
     label {
         font-size: 1.15rem;
