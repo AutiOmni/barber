@@ -325,11 +325,11 @@ label {
 /* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
 
     .active-bye .appointment-form {
-        transform: translate(200%, 0%);
+        transform: translate(250%, 0%);
     }
 
     .active-bye .appointment-img {
-        transform: translate(-200%, 0%);
+        transform: translate(-250%, 0%);
     }
 
 /* ------------------ @MEDIA ----------------------- */
