@@ -290,6 +290,11 @@ input,
     border-radius: 5px;
 }
 
+select {
+    max-width: 100%; 
+    text-overflow: ellipsis;
+}
+
 input[type=date] {
     padding: 7px;
     background-image: none;
