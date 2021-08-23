@@ -535,6 +535,7 @@ label {
 
     .appointment-form {
         z-index: 99;
+        height: 100%;
     }
 
     .appointment-img {
@@ -553,13 +554,18 @@ label {
     }
 
     label {
-        font-size: 1.15rem;
+        font-size: 1rem;
         color: #fff;
         text-shadow: 1px 1px 1px #000;
     }
 
+    input,
+    select {
+        padding: 5px;
+    }
+
     input[type=date] {
-        width: 100%;
+        padding: 3px;
     }
 
 }
