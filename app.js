@@ -103,3 +103,8 @@ appointmentTransition()
     $('#gallery').removeClass('active-link');
 });
 
+// FORM SUBMISSION ------------------------
+
+$('#submit').click(function(e) {
+    e.preventDefault()
+})
