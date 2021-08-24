@@ -557,10 +557,12 @@ label {
         font-size: 1rem;
         color: #fff;
         text-shadow: 1px 1px 1px #000;
+        white-space: nowrap;
     }
 
     input,
     select {
+        width: 100%;
         padding: 5px;
     }
 
