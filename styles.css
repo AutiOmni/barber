@@ -240,14 +240,6 @@ li:nth-of-type(3) .active-link:after {
 
 /* ------------------ APPOINTMENTS --------------------------------------------------------- */
 
-.form-title {
-    margin-top: 5px;
-    color: #000;
-    width: 100%;
-    text-align: center;
-    font-size: 1.25rem;
-}
-
 .appointment-img {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
@@ -268,14 +260,20 @@ li:nth-of-type(3) .active-link:after {
     width: 100%;
 }
 
+.form-title {
+    margin-top: 5px;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
 .appointment-form {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     transition: all ease 750ms;
-    height: 110%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    height: 100%;
+    position: relative;
 }
 
 form div {
@@ -323,12 +321,8 @@ label {
 }
 
 .cut-type-cont {
-    width: 100%;
-}
-
-.cut-type {
-    width: 95%;
-    text-align: center;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .service {
@@ -379,6 +373,37 @@ label {
 
 #submit:active {
     transform: scale(.98)
+}
+
+/* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
+
+.service-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.modal {
+    width: 75%;
+    height: 75%;
+    background-color: #fff;
+    background-image:url(clean-textile.png);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.service-modal.active-modal {
+    display: block;
 }
 
 /* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */

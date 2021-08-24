@@ -109,9 +109,21 @@ $('#submit').click(function(e) {
     e.preventDefault()
 })
 
-$('#service').click(function(e) {
-    e.preventDefault()
-})
+
+
 $('#drink-choices').click(function(e) {
     e.preventDefault()
+})
+
+// MODAL FUNCTIONS
+$('#service').click(function(e) {
+    e.preventDefault()
+
+    $('.service-modal').show()
+})
+
+$(window).click(function(e) {
+    if ((e.target.id != 'modal' && e.target.id != 'modal-radio') && e.target.id != 'service') {
+        $('#service-modal').hide();
+     }
 })
