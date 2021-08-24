@@ -108,3 +108,10 @@ appointmentTransition()
 $('#submit').click(function(e) {
     e.preventDefault()
 })
+
+$('#service').click(function(e) {
+    e.preventDefault()
+})
+$('#drink-choices').click(function(e) {
+    e.preventDefault()
+})
