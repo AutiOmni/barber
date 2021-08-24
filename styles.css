@@ -244,6 +244,7 @@ li:nth-of-type(3) .active-link:after {
     color: #000;
     width: 100%;
     text-align: center;
+    font-size: 1.25rem;
 }
 
 .appointment-img {
@@ -270,6 +271,10 @@ li:nth-of-type(3) .active-link:after {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     transition: all ease 750ms;
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 form div {
@@ -290,11 +295,6 @@ input,
     border-radius: 5px;
 }
 
-select {
-    width: 100%; 
-    text-overflow: ellipsis;
-}
-
 input[type=date] {
     padding: 7px;
     background-image: none;
@@ -308,36 +308,58 @@ label {
 
 .divided-form-cont {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
 }
 
 .date-cont {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-content: center;
     flex-direction: column;  
 }
 
 .drink-selection-cont {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
 }
 
-.cut-type-cont,
-.cut-type-cont > div {
+.cut-type-cont {
     width: 100%;
-    display: block;
-    text-align: center;
 }
 
 .cut-type {
-    width: 50%;
+    width: 95%;
+    text-align: center;
+}
+
+.service {
+    width: 97%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.drink-choices {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.service:active {
+    transform: scale(.98);
+    border: 1px solid #000;
+}
+
+.drink-choices:active {
+    transform: scale(.98);
+    border: 1px solid #000;
 }
 
 #submit {
@@ -449,6 +471,7 @@ label {
     .divided-form-cont {
         flex-direction: column;
     }
+    
 }
 
 @media (max-width: 650px) {
@@ -561,7 +584,7 @@ label {
 
     .drink-selection-cont,
         .date-cont {
-            width: 50%;
+            width: 100%;
         }
 
     input[type=date] {

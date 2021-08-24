@@ -41,7 +41,7 @@
 
                             <div class="name-form-cont">
                             <input type="text" name="first-name" placeholder="First Name" required pattern="\w+" maxlength="25">
-                            <input type="text" name="last-name" placeholder="Last Name" required pattern="\w" maxlength="25">
+                            <input type="text" name="last-name" placeholder="Last Name" required pattern="\w+" maxlength="25">
                             </div>
 
                             <div class="contact-form-cont">
@@ -50,6 +50,9 @@
                             </div>
 
                             <div class="cut-type-cont">
+
+                                <button class="service" id="service">Choose A Service</button>
+                                <!--
                                 <div>
                                 <label for="cut-type">Choose A Service</label>
                                 </div>
@@ -61,6 +64,7 @@
                                     <option value="Beard Trim">Beard Trim</option>
                                     <option value="Shave">Shave</option>
                                 </select>
+                                -->
                             </div>
 
                         <div class="divided-form-cont">
@@ -70,18 +74,21 @@
                                     <label for="appointment-date">Preferred Appointment Date: </label>
                                 </div>
                                 <div>
-                                    <input type="date" name="appointment-date" required>
+                                    <input class="date" type="date" name="appointment-date" required>
                                 </div>
                             </div> 
 
                             <div class="drink-selection-cont">
-                                
+                                <!--
                                 <div>
                                     <label for="preferred-beer">Preferred Drink: </label>
                                 </div>
-
+                            -->
                                 <div>
-                                    <select name="drink-choice" id="drink-choice">
+
+                                    <button class="drink-choices" id="drink-choices">Preferred Drink</button>
+                                    <!--
+                                    <select class="drink-choice" name="drink-choice" id="drink-choice">
                                         <option value="Barber's Choice">Barber's Choice</option>
                                         <option value="Ale">Ale</option>
                                         <option value="Blond Ale">Blond Ale</option>
@@ -100,8 +107,9 @@
                                         <option value="Cider">Cider</option>
                                         <option value="Root Beer">Root Beer (Non-Alcoholic)</option>
                                     </select>
+                                     -->    
                                 </div>
-                                
+                           
                             </div>
 
                         </div>
