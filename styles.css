@@ -291,34 +291,38 @@ input,
 }
 
 select {
-    max-width: 100%; 
+    width: 100%; 
     text-overflow: ellipsis;
 }
 
 input[type=date] {
     padding: 7px;
     background-image: none;
+    width: 100%;
 }
 
 label {
     margin-bottom: 5px;
+    white-space: nowrap;
 }
 
 .divided-form-cont {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
 }
 
 .date-cont {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;   
+    flex-direction: column;  
 }
 
 .drink-selection-cont {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -441,19 +445,10 @@ label {
             top: -20px;
         }
     }
-    
-    .date-cont {
-        width: 100%;
-    }
-    
-    .drink-selection-cont {
-        width: 100%;
-    }
 
     .divided-form-cont {
-       
+        flex-direction: column;
     }
-
 }
 
 @media (max-width: 650px) {
@@ -557,14 +552,17 @@ label {
         font-size: 1rem;
         color: #fff;
         text-shadow: 1px 1px 1px #000;
-        white-space: nowrap;
     }
 
     input,
     select {
-        width: 100%;
         padding: 5px;
     }
+
+    .drink-selection-cont,
+        .date-cont {
+            width: 50%;
+        }
 
     input[type=date] {
         padding: 3px;
