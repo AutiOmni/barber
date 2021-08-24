@@ -591,6 +591,8 @@ label {
     .appointment-form {
         z-index: 99;
         height: 100%;
+        width: 100%;
+        margin-top: 0%;
     }
 
     .appointment-img {
@@ -613,7 +615,6 @@ label {
         color: #fff;
         text-shadow: 1px 1px 1px #000;
     }
-
 
     .drink-selection-cont,
         .date-cont {
