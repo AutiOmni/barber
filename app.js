@@ -119,11 +119,13 @@ $('#drink-choices').click(function(e) {
 $('#service').click(function(e) {
     e.preventDefault()
 
-    $('.service-modal').show()
+    $('.service-modal').addClass('active-modal');
 })
 
-$(window).click(function(e) {
-    if ((e.target.id != 'modal' && e.target.id != 'modal-radio') && e.target.id != 'service') {
-        $('#service-modal').hide();
-     }
+$('#closeBtn').click(function() {
+    $('.service-modal').removeClass('active-modal');
+})
+
+$('input').click(function() {
+    console.log(this.value)
 })

@@ -340,6 +340,8 @@ label {
     cursor: pointer;
 }
 
+
+
 .drink-choices {
     width: 120%;
     padding: 10px;
@@ -399,14 +401,67 @@ label {
     background-color: #fff;
     background-image:url(clean-textile.png);
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
 }
 
+.closeBtn {
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.closeBtn:active {
+    transform: scale(.98)
+}
+
 .service-modal.active-modal {
     display: block;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.test-box {
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out 500ms;
+}
+
+.test-box:active {
+    transform: scale(.98)
+}
+
+input[type=radio]:checked + div {
+    box-shadow: 0px 1px 10px #000;
+}
+
+.service-radio-label {
+    width: 30%;
+}
+
+.top-service-modal-row,
+    .bottom-service-modal-row  {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.bottom-service-modal-row {
+    margin-top: 5%;
 }
 
 /* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
