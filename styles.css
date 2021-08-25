@@ -648,7 +648,7 @@ input[type=radio]:checked + div {
         margin-left: 5%;
     }
 
-    .form-title {
+    .form-title, p {
         color: #fff; 
         text-shadow: -1px 0px 1px #000;
     }
@@ -685,11 +685,6 @@ input[type=radio]:checked + div {
         color: #fff;
         text-shadow: 1px 1px 1px #000;
     }
-
-    .drink-selection-cont,
-        .date-cont {
-            width: 100%;
-        }
 
     input[type=date] {
         padding: 3px;
