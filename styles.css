@@ -194,7 +194,7 @@ section {
     height: calc(100% - 200px);
     width: 100vw;
     overflow-x: hidden;
-    transform: translateY(100%);
+    transform: translateY(500%);
 }
 
 .appointment {
@@ -310,22 +310,24 @@ label {
 
 .divided-form-cont {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    width: 95%;
 }
 
 .date-cont {
-    width: 100%;
-    display: flex;
+    width: 45%;
     flex-direction: column;  
 }
 
 .drink-selection-cont {
-    width: 100%;
+    width: 45%;
+    flex-direction: column; 
 }
 
 .cut-type-cont {
     width: 75%;
     margin: 0 auto;
+    flex-direction: column;
 }
 
 .service {
@@ -339,8 +341,6 @@ label {
     background-image: url(clean-textile.png);
     cursor: pointer;
 }
-
-
 
 .drink-choices {
     width: 120%;
@@ -403,24 +403,11 @@ label {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
-}
-
-.closeBtn {
-    font-size: 2rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 0px 10px;
-    cursor: pointer;
-}
-
-.closeBtn:active {
-    transform: scale(.98)
 }
 
 .service-modal.active-modal {
@@ -432,11 +419,11 @@ input[type=radio] {
 }
 
 .test-box {
-    height: 100px;
+    height: 70px;
     border: 1px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    transition: all ease-in-out 500ms;
+    transition: all ease-in-out 250ms;
 }
 
 .test-box:active {
@@ -448,11 +435,14 @@ input[type=radio]:checked + div {
 }
 
 .service-radio-label {
-    width: 30%;
+    width: 45%;
+    height: 100%;
+    margin-bottom: 0px;
 }
 
 .top-service-modal-row,
-    .bottom-service-modal-row  {
+    .bottom-service-modal-row,
+        .middle-service-modal-row  {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -461,16 +451,18 @@ input[type=radio]:checked + div {
 }
 
 .bottom-service-modal-row {
-    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
 
     .active-bye .appointment-form {
+        opacity: 0;
         transform: translate(250%, 0%);
     }
 
     .active-bye .appointment-img {
+        opacity: 0;
         transform: translate(-250%, 0%);
     }
 
@@ -562,6 +554,29 @@ input[type=radio]:checked + div {
 
     .divided-form-cont {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .date-cont {
+        width: 80%;
+        flex-direction: column;
+    }
+    
+    .drink-selection-cont {
+        width: 75%;
+        flex-direction: column;
+    }
+    
+    .cut-type-cont {
+        width: 75%;
+        flex-direction: column;
+    }
+
+    .modal {
+        width: 95%;
+        height: 95%
     }
     
 }

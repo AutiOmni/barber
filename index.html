@@ -43,53 +43,37 @@
 
                             <div class="modal" id="modal">
 
-                                <span class="closeBtn" id="closeBtn">X</span>
-
-                                <div class="top-service-modal-row">
-                                    <label class="service-radio-label" for="haircut">
-                                    <input id="haircut" name="service" type="radio" value="haircut">
-                                    <div class="test-box">Haircut</div>
-                                    </label>
-                                    <label class="service-radio-label" for="cut-beard-trim">
-                                    <input id="cut-beard-trim" name="service" type="radio" value="haircut & beard trim">
-                                    <div class="test-box">Haircut & Beard Trim</div>
-                                    </label>
-                                    <label class="service-radio-label" for="haircut-shave">
-                                    <input id="haircut-shave" name="service" type="radio" value="haircut & shave">
-                                    <div class="test-box">Haircut & Shave</div>
-                                    </label>
-                                </div>
-                                <div class="bottom-service-modal-row">
-                                    <label class="service-radio-label" for="beard-trim">
-                                    <input id="beard-trim" name="service" type="radio" value="beard trim">
-                                    <div class="test-box">Beard Trim</div>
-                                    </label>
-                                    <label class="service-radio-label" for="shave">
-                                    <input id="shave" name="service" type="radio" value="shave">
-                                    <div class="test-box">Shave</div>
-                                    </label>
-                                    <label class="service-radio-label" for="child-cut">
-                                        <input id="child-cut" name="service" type="radio" value="children's haircut">
+                                    <div class="top-service-modal-row">
+                                        <label class="service-radio-label" for="haircut">
+                                        <input id="haircut" class="service-radio" name="service" type="radio" value="Haircut" checked="true">
+                                        <div class="test-box">Haircut</div>
+                                        </label>
+                                        <label class="service-radio-label" for="cut-beard-trim">
+                                        <input id="cut-beard-trim" class="service-radio" name="service" type="radio" value="Haircut & Beard Trim" >
+                                        <div class="test-box">Haircut & Beard Trim</div>
+                                        </label>
+                                    </div>
+                                    <div class="middle-service-modal-row">
+                                        <label class="service-radio-label" for="haircut-shave">
+                                        <input id="haircut-shave" class="service-radio" name="service" type="radio" value="Haircut & Shave">
+                                        <div class="test-box">Haircut & Shave</div>
+                                        </label>
+                                        <label class="service-radio-label" for="beard-trim">
+                                        <input id="beard-trim" class="service-radio" name="service" type="radio" value="Beard Trim">
+                                        <div class="test-box">Beard Trim</div>
+                                        </label>
+                                    </div> 
+                                    <div class="bottom-service-modal-row">
+                                        <label class="service-radio-label" for="shave">
+                                        <input id="shave" class="service-radio" name="service" type="radio" value="Shave">
+                                        <div class="test-box">Shave</div>
+                                        </label>
+                                        <label class="service-radio-label" for="child-cut">
+                                        <input id="child-cut" class="service-radio" name="service" type="radio" value="Children's Haircut">
                                         <div class="test-box">Children's Haircut</div>
-                                    </label>
+                                        </label>
+                                    </div>
                                 </div>
-
-                            </div>
-
-                                                            <!--
-                                <div>
-                                <label for="cut-type">Choose A Service</label>
-                                </div>
-                                <select name="cut-type" class="cut-type">
-                                    <option value="Haircut">Haircut</option>
-                                    <option value="Haircut & Beard Trim">Haircut & Beard Trim</option>
-                                    <option value="Haircut & Beard Trim">Haircut & Shave</option>
-                                    <option value="Children's Haircut">Children's Haircut</option>
-                                    <option value="Beard Trim">Beard Trim</option>
-                                    <option value="Shave">Shave</option>
-                                </select>
-                                -->
-
                         </div>
 
                             <div class="name-form-cont">
@@ -103,17 +87,19 @@
                             </div>
 
                             <div class="cut-type-cont">
-
-                                <button class="service" id="service">Choose A Service</button>
+                                <p>Select A Service</p>
+                                <div class="service" id="service">Haircut</div>
 
                             </div>
 
                         <div class="divided-form-cont">
 
                             <div class="date-cont">
-                                <div>
+                              
+                                    <p>Select A Date</p>
+                                    
                                     <input class="date" type="date" name="appointment-date" required>
-                                </div>
+                                
                             </div> 
 
                             <div class="drink-selection-cont">
@@ -121,10 +107,11 @@
                                 <div>
                                     <label for="preferred-beer">Preferred Drink: </label>
                                 </div>
-                            -->
-                                
+                                -->
+                                    
+                                <p>Select A Drink</p>
+                                <div class="drink-choices" id="drink-choices">Drinks</div>
 
-                                    <button class="drink-choices" id="drink-choices">Preferred Drink</button>
                                     <!--
                                     <select class="drink-choice" name="drink-choice" id="drink-choice">
                                         <option value="Barber's Choice">Barber's Choice</option>
