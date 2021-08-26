@@ -27,6 +27,7 @@ a {
 hr {
     border-color: #000;
     border-bottom: none;
+    margin-top: 5px;
 }
 
 /* ----------------------------- HEADER ----------------------------------- */
@@ -52,7 +53,10 @@ header {
     display: none;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2.5px;
-
+    text-shadow:0.025em  0.025em 0em #232325,
+    0.05em  0.05em 0em #fff,
+    0.075em  0.075em 0em #232325,
+    0.1em  0.1em 0em #fff;
 }
 
 .logo-name-nav {
@@ -71,6 +75,10 @@ header {
     background-repeat: repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow:0.025em  0.025em 0em #232325,
+    0.05em  0.05em 0em #fff,
+    0.075em  0.075em 0em #232325,
+    0.1em  0.1em 0em #fff;
 }
 
 .logo img {
@@ -272,7 +280,6 @@ li:nth-of-type(3) .active-link:after {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     transition: all ease 750ms;
-    margin-top: 3%;
     height: 100%;
     width: 97.5%;
     position: relative;
@@ -301,11 +308,6 @@ input[type=date] {
     padding: 7px;
     background-image: none;
     width: 100%;
-}
-
-label {
-    margin-bottom: 5px;
-    white-space: nowrap;
 }
 
 .divided-form-cont {
@@ -396,8 +398,8 @@ label {
 }
 
 .modal {
-    width: 75%;
-    height: 75%;
+    width: 90%;
+    height: 90%;
     background-color: #fff;
     background-image:url(clean-textile.png);
     position: absolute;
@@ -678,12 +680,6 @@ input[type=radio]:checked + div {
     .active-bye .appointment-img {
         opacity: 0;
         transform: translate(-0%, 0%);
-    }
-
-    label {
-        font-size: 1rem;
-        color: #fff;
-        text-shadow: 1px 1px 1px #000;
     }
 
     input[type=date] {
