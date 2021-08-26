@@ -56,6 +56,8 @@ appointmentTransition()
 
 $('#submit').click(function(e) {
     e.preventDefault()
+
+    console.log($('.date').val())
 })
 
 
@@ -66,14 +68,20 @@ $('#drink-choices').click(function(e) {
 // MODAL FUNCTIONS
 
 $('#service').click(function() {
-    $('.service-modal').addClass('active-modal');
+    $('.modal').addClass('active-service-modal active-modal');
 })
 
 $('.service-radio').each(function() {
    
     $(this).click(function() {
-        $('.service-modal').removeClass('active-modal');
-        $('#service').html(this.value)
+        $('.modal').removeClass('active-service-modal active-modal');
+        $('#service').html('Service Selected: ' + this.value)
     })
     
 })
+
+$('.date').click(function() {
+    $('#date-input').focus()
+    
+})
+

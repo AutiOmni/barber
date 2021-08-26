@@ -283,7 +283,6 @@ li:nth-of-type(3) .active-link:after {
     height: 100%;
     width: 97.5%;
     position: relative;
-
 }
 
 form div {
@@ -304,26 +303,17 @@ input,
     border-radius: 5px;
 }
 
-input[type=date] {
-    padding: 7px;
-    background-image: none;
-    width: 100%;
-}
-
 .divided-form-cont {
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 100%;
+    padding: 0 10px;
+
 }
 
-.date-cont {
-    width: 45%;
-    flex-direction: column;  
-}
-
-.drink-selection-cont {
-    width: 45%;
-    flex-direction: column; 
+.date-cont,
+    .drink-selection-cont {
+    width: 47.5%;
 }
 
 .cut-type-cont {
@@ -344,10 +334,11 @@ input[type=date] {
     cursor: pointer;
 }
 
-.drink-choices {
-    width: 120%;
+.drink-choices,
+.date {
+    width: 100%;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0px;
     font-size: 1.25rem;
     border-radius: 5px;
     border: 1px solid #000;
@@ -356,12 +347,9 @@ input[type=date] {
     cursor: pointer;
 }
 
-.service:active {
-    transform: scale(.98);
-    border: 1px solid #000;
-}
-
-.drink-choices:active {
+.service:active,
+    .drink-choices:active,
+        .date:active {
     transform: scale(.98);
     border: 1px solid #000;
 }
@@ -382,9 +370,9 @@ input[type=date] {
     transform: scale(.98)
 }
 
-/* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
+/* -------------------------- MODAL -------------------------------- */
 
-.service-modal {
+.modal {
     display: none;
     position: absolute;
     top: 0;
@@ -397,13 +385,14 @@ input[type=date] {
     border-radius: 5px;
 }
 
-.modal {
+.service-modal,
+    .drink-modal {
     width: 90%;
     height: 90%;
     background-color: #fff;
     background-image:url(clean-textile.png);
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     left: 50%;
@@ -412,12 +401,28 @@ input[type=date] {
     border-radius: 5px;
 }
 
-.service-modal.active-modal {
+.service-modal-title, 
+.drink-modal-title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+
+.modal.active-modal {
     display: block;
+}
+
+.modal.active-service-modal .service-modal {
+    display: flex;
 }
 
 input[type=radio] {
     display: none;
+}
+
+input[type=date] {
+    display: block;
 }
 
 .test-box {
@@ -474,7 +479,6 @@ input[type=radio]:checked + div {
     a {
         font-size: 1.25rem;
     }
-
 }
 
 @media (max-width: 850px) {
@@ -680,10 +684,6 @@ input[type=radio]:checked + div {
     .active-bye .appointment-img {
         opacity: 0;
         transform: translate(-0%, 0%);
-    }
-
-    input[type=date] {
-        padding: 3px;
     }
 
 }

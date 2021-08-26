@@ -39,13 +39,13 @@
 
                         <legend class="form-title">Contact Information</legend>
 
-                        <div class="service-modal" id="service-modal">
-
-                            <div class="modal" id="modal">
-
+                        <div class="modal" id="modal">
+ <!------------------------------------------------------------- SERVICE MODAL ------------------------------------------------------------>
+                            <div class="service-modal" id="service-modal">
+                                <p class="service-modal-title">Select A Service</p>
                                     <div class="top-service-modal-row">
                                         <label class="service-radio-label" for="haircut">
-                                        <input id="haircut" class="service-radio" name="service" type="radio" value="Haircut" checked="true">
+                                        <input id="haircut" class="service-radio" name="service" type="radio" value="Haircut">
                                         <div class="test-box">Haircut</div>
                                         </label>
                                         <label class="service-radio-label" for="cut-beard-trim">
@@ -74,7 +74,20 @@
                                         </label>
                                     </div>
                                 </div>
-                        </div>
+<!------------------------------------------------------------- DRINK MODAL ------------------------------------------------------------>
+                                <div class="drink-modal" id="drink-modal">
+                                    <p class="drink-modal-title">Select A Service</p>
+                                        <div class="top-drink-modal-row">
+                                            <label class="drink-radio-label" for="">
+                                            <input id="" class="drink-radio" name="drink" type="radio" value="" checked="">
+                                            <div class="test-box">Haircut</div>
+                                            </label>
+                                
+                                        </div>
+
+                                    </div>
+                        </div> <!--END OF MAIN MODAL CONT-->
+
 
                             <div class="name-form-cont">
                             <input type="text" name="first-name" placeholder="First Name" required pattern="\w+" maxlength="25">
@@ -87,19 +100,14 @@
                             </div>
 
                             <div class="cut-type-cont">
-                                <p>Select A Service</p>
-                                <div class="service" id="service">Haircut</div>
-
+                                <div class="service" id="service">Select A Service</div>
                             </div>
 
                         <div class="divided-form-cont">
 
                             <div class="date-cont">
-                              
-                                    <p>Select A Date</p>
-                                    
-                                    <input class="date" type="date" name="appointment-date" required>
-                                
+                                    <div class="date" id="date">Select Appointment Date</div>    
+                                    <input type="date" class="date-input" id="date-input">                            
                             </div> 
 
                             <div class="drink-selection-cont">
@@ -108,9 +116,7 @@
                                     <label for="preferred-beer">Preferred Drink: </label>
                                 </div>
                                 -->
-                                    
-                                <p>Select A Drink</p>
-                                <div class="drink-choices" id="drink-choices">Drinks</div>
+                                <div class="drink-choices" id="drink-choices">Select A Drink</div>
 
                                     <!--
                                     <select class="drink-choice" name="drink-choice" id="drink-choice">
