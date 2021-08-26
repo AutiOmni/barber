@@ -10,7 +10,7 @@ html,
     margin: 0px;
     padding: 0px;
     font-family: 'Raleway', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
