@@ -82,6 +82,15 @@ $('.service-radio').each(function() {
 
 $('.date').click(function() {
     $('#date-input').focus()
-    
 })
 
+$('.drink-choices').click(function() {
+    $('.modal').addClass('active-drinks-modal active-modal');
+})
+
+$('.drink-radio').each(function() {
+    $(this).click(function() {
+        $('.modal').removeClass('active-drinks-modal active-modal');
+        $('#drink-choices').html('Drink: ' + this.value)
+    })
+})

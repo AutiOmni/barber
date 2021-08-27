@@ -10,7 +10,7 @@ html,
     margin: 0px;
     padding: 0px;
     font-family: 'Raleway', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body {
@@ -387,8 +387,8 @@ input,
 
 .service-modal,
     .drink-modal {
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     background-color: #fff;
     background-image:url(clean-textile.png);
     position: absolute;
@@ -450,6 +450,13 @@ input[type=radio]:checked + div {
     width: 45%;
     height: 100%;
     margin-bottom: 0px;
+    text-align: center;
+}
+
+.drink-radio-label {
+    width: 25%;
+    height: 100%;
+    text-align: center;
 }
 
 .top-service-modal-row,
@@ -461,6 +468,18 @@ input[type=radio]:checked + div {
     width: 100%;
     margin-top: 5%;
 }
+
+.drinks-row-one,
+    .drinks-row-two,
+        .drinks-row-three,
+            .drinks-row-four {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+                margin-top: 5%;
+            }
+
 
 .bottom-service-modal-row {
     margin-bottom: 5%;
@@ -571,22 +590,22 @@ input[type=radio]:checked + div {
     }
     
     .date-cont {
-        width: 80%;
+        width: 100%;
         flex-direction: column;
     }
     
     .drink-selection-cont {
-        width: 75%;
+        width: 100%;
         flex-direction: column;
     }
     
     .cut-type-cont {
-        width: 75%;
+        width: 95%;
         flex-direction: column;
     }
 
- 
-    
+
+
 }
 
 @media (max-width: 650px) {
@@ -687,6 +706,13 @@ input[type=radio]:checked + div {
         opacity: 0;
         transform: translate(-0%, 0%);
     }
+
+    .service,
+        .drink-choices,
+            .date,
+                input {
+            font-size: .9rem;
+        }
 
 }
 
