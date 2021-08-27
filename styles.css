@@ -273,7 +273,7 @@ li:nth-of-type(3) .active-link:after {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid green;
+    border: 1px solid blue;
 }
 
 form {
