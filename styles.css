@@ -318,6 +318,7 @@ input {
     border: 1px solid #000;
     border-radius: 5px; 
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .service {
@@ -459,7 +460,6 @@ input[type=radio]:checked + div {
 
 .drink-radio-label {
     width: 30%;
-    height: 100%;
 }
 
 .top-service-modal-row,
@@ -486,9 +486,9 @@ input[type=radio]:checked + div {
                 width: 100%;
             }
 
-            .drinks-row-one {
-                margin-top: 25px;
-            }
+.drinks-row-one {
+    margin-top: 25px;
+}
 /* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
 
     .active-bye .appointment-form {
