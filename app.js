@@ -75,7 +75,7 @@ $('.service-radio').each(function() {
    
     $(this).click(function() {
         $('.modal').removeClass('active-service-modal active-modal');
-        $('#service').html('Service Selected: ' + this.value)
+        $('#service p').html('Service Selected: ' + this.value)
     })
     
 })
@@ -91,6 +91,6 @@ $('.drink-choices').click(function() {
 $('.drink-radio').each(function() {
     $(this).click(function() {
         $('.modal').removeClass('active-drinks-modal active-modal');
-        $('#drink-choices').html('Drink: ' + this.value)
+        $('#drink-choices p').html('Drink: ' + this.value)
     })
 })
