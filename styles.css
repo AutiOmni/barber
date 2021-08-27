@@ -197,6 +197,8 @@ section {
     width: 100vw;
     overflow-x: hidden;
     transform: translateY(500%);
+    border: 1px solid blue;
+
 }
 
 .appointment {
@@ -206,6 +208,14 @@ section {
     grid-template-rows: 1fr 1fr;
     transition: all ease 750ms;  
     opacity: 0;
+    border: 1px solid red;
+}
+
+
+.active-sect {
+    opacity: 1;
+    z-index: 99;
+    transform: translateY(0%);
 }
 
 .gallery {
@@ -221,12 +231,6 @@ section {
 }
 
 /* ------------------ SECTION ADDING AND HOVER EFFECT STAY ------------------------------- */
-
-.active-sect {
-    opacity: 1;
-    z-index: 99;
-    transform: translateY(0%);
-}
 
 li:nth-of-type(1) .active-link:after {
     opacity: 1;
@@ -271,6 +275,8 @@ li:nth-of-type(3) .active-link:after {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid green;
+
 }
 
 form {
