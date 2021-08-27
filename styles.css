@@ -10,10 +10,8 @@ html,
     margin: 0px;
     padding: 0px;
     font-family: 'Raleway', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
     height: 100vh;
-    border: 1px solid red;
-    overflow-y: scroll;
 }
 
 body {
@@ -196,10 +194,11 @@ li:nth-of-type(3):hover a:after {
 
 section {
     max-height: calc(100% - 200px);
+    width: 100vw;
 }
 
 .appointment {
-    position: relative;
+    position: absolute;
     transform: translateY(500%);
     display: grid;
     grid-template-columns: 45% 55%;
@@ -213,6 +212,20 @@ section {
     z-index: 99;
     transform: translateY(0%);
 }
+
+/* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
+
+.active-bye .appointment-form {
+    opacity: 0;
+    transform: translate(250%, 0%);
+}
+
+.active-bye .appointment-img {
+    opacity: 0;
+    transform: translate(-250%, 0%);
+}
+
+/* -------------------------- OTHER SECTIONS ----------- */
 
 .gallery {
     opacity: 0;    
@@ -479,7 +492,6 @@ input[type=radio]:checked + div {
     margin-top: 25px;
 }
 
-
 .drinks-row-one,
     .drinks-row-two,
         .drinks-row-three,
@@ -493,17 +505,6 @@ input[type=radio]:checked + div {
 .drinks-row-one {
     margin-top: 25px;
 }
-/* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
-
-    .active-bye .appointment-form {
-        opacity: 0;
-        transform: translate(250%, 0%);
-    }
-
-    .active-bye .appointment-img {
-        opacity: 0;
-        transform: translate(-250%, 0%);
-    }
 
 /* ------------------ @MEDIA ----------------------- */
 
@@ -689,16 +690,6 @@ input[type=radio]:checked + div {
         width: 100%;
         height: 100%;
         border-radius: 5px 5px 0px 0px;
-    }
-
-    .active-bye .appointment-form {
-        opacity: 0;
-        transform: translate(0%, 0%);
-    }
-
-    .active-bye .appointment-img {
-        opacity: 0;
-        transform: translate(-0%, 0%);
     }
 
     .service-modal-title, 
