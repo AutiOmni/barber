@@ -405,11 +405,13 @@ input {
 .modal.active-service-modal .service-modal {
     display: flex;
     flex-direction: column;
+    justify-content: stretch;
 }
 
 .modal.active-drinks-modal .drink-modal {
     display: flex;
     flex-direction: column;
+    justify-content: stretch;
 }
 
 input[type=radio] {
