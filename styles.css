@@ -602,6 +602,10 @@ input[type=radio]:checked + div {
         height: 300px;
     }
 
+    input {
+        font-size: 17px;
+    }
+
     section {
         height: calc(100% - 300px);
         width: 100vw;
@@ -700,9 +704,8 @@ input[type=radio]:checked + div {
 
     .service,
         .drink-choices,
-            .date,
-                input,
-                    p {
+            .date, 
+                p {
                         
             font-size: .9rem;
         }
