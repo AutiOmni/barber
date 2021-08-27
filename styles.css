@@ -417,6 +417,10 @@ input,
     display: flex;
 }
 
+.modal.active-drinks-modal .drink-modal {
+    display: flex;
+}
+
 input[type=radio] {
     display: none;
 }
@@ -425,7 +429,8 @@ input[type=date] {
     display: none;
 }
 
-.test-box {
+.test-box,
+    .drink-box {
     height: 70px;
     border: 1px solid #000;
     border-radius: 5px;
@@ -580,10 +585,7 @@ input[type=radio]:checked + div {
         flex-direction: column;
     }
 
-    .modal {
-        width: 95%;
-        height: 95%
-    }
+ 
     
 }
 
