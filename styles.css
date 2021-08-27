@@ -206,9 +206,7 @@ section {
     grid-template-rows: 1fr 1fr;
     transition: all ease 750ms;  
     opacity: 0;
-    border: 1px solid red;
 }
-
 
 .active-sect {
     opacity: 1;
@@ -273,7 +271,6 @@ li:nth-of-type(3) .active-link:after {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid blue;
 }
 
 form {
@@ -371,23 +368,22 @@ input {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    margin: 0;
 }
 
 .service-modal,
     .drink-modal {
     width: 95%;
-    height: 95%;
+    height: 90%;
     background-color: #fff;
     background-image:url(clean-textile.png);
     position: absolute;
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
+    overflow-y: scroll;
 }
 
 .service-modal-title, 
@@ -395,7 +391,7 @@ input {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 0;
+    top: 5px;
 }
 
 .modal.active-modal {
@@ -404,10 +400,12 @@ input {
 
 .modal.active-service-modal .service-modal {
     display: flex;
+    flex-direction: column;
 }
 
 .modal.active-drinks-modal .drink-modal {
     display: flex;
+    flex-direction: column;
 }
 
 input[type=radio] {
@@ -418,16 +416,29 @@ input[type=date] {
     display: none;
 }
 
-.test-box,
-    .drink-box {
-    height: 70px;
+.service-box {
+    height: 75px;
     border: 1px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    transition: all ease-in-out 250ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
 }
 
-.test-box:active {
+.drink-box {
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.service-box:active {
     transform: scale(.98)
 }
 
@@ -437,15 +448,11 @@ input[type=radio]:checked + div {
 
 .service-radio-label {
     width: 45%;
-    height: 100%;
-    margin-bottom: 0px;
-    text-align: center;
 }
 
 .drink-radio-label {
-    width: 25%;
+    width: 30%;
     height: 100%;
-    text-align: center;
 }
 
 .top-service-modal-row,
@@ -455,12 +462,12 @@ input[type=radio]:checked + div {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    margin-top: 5%;
 }
 
-.bottom-service-modal-row {
-    margin-bottom: 5%;
+.top-service-modal-row {
+    margin-top: 25px;
 }
+
 
 .drinks-row-one,
     .drinks-row-two,
@@ -472,9 +479,9 @@ input[type=radio]:checked + div {
                 width: 100%;
             }
 
-.drinks-row-one {
-    margin-top: 15px;
-}
+            .drinks-row-one {
+                margin-top: 25px;
+            }
 /* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
 
     .active-bye .appointment-form {
@@ -573,11 +580,14 @@ input[type=radio]:checked + div {
         }
     }
 
+    .service-box,
+            .drink-box {       
+            font-size: .9rem;
+        }
 
- 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     header {
         grid-template-rows: repeat(4, 1fr);
@@ -686,6 +696,7 @@ input[type=radio]:checked + div {
             .date,
                 input,
                     p {
+                        
             font-size: .9rem;
         }
 
