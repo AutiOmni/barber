@@ -417,6 +417,17 @@ input[type=date] {
 }
 
 .service-box {
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px;
+}
+
+.drink-box {
     height: 75px;
     border: 1px solid #000;
     border-radius: 5px;
@@ -424,18 +435,8 @@ input[type=date] {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px 0;
-}
+    margin: 5px 0px;
 
-.drink-box {
-    height: 50px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px 0;
 }
 
 .service-box:active {
