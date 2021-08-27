@@ -455,10 +455,12 @@ input[type=radio]:checked + div {
 }
 
 .service-radio-label {
+    -webkit-tap-highlight-color: transparent;
     width: 45%;
 }
 
 .drink-radio-label {
+    -webkit-tap-highlight-color: transparent;
     width: 30%;
 }
 
