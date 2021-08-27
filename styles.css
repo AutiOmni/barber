@@ -38,7 +38,7 @@ header {
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 40% 60%;
-    overflow-x:hidden;
+    overflow:hidden;
 }
 
 .logo {
@@ -691,7 +691,7 @@ input[type=radio]:checked + div {
     }
 
     form {
-        padding: 10px;
+        padding: 0px 10px;
     }
 
     .appointment-img {
