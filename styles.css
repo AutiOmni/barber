@@ -10,9 +10,10 @@ html,
     margin: 0px;
     padding: 0px;
     font-family: 'Raleway', sans-serif;
-    overflow: hidden;
-    border: 1px solid red;
+    overflow-x: hidden;
     height: 100vh;
+    border: 1px solid red;
+    overflow-y: scroll;
 }
 
 body {
@@ -194,22 +195,19 @@ li:nth-of-type(3):hover a:after {
 /* ------------------ SECTION ---------------------------------------------------- */
 
 section {
-    position: absolute;
     max-height: calc(100% - 200px);
-    width: 100vw;
-    overflow-x: hidden;
-    transform: translateY(500%);
 }
 
 .appointment {
-    position: absolute;
+    position: relative;
+    transform: translateY(500%);
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: 1fr 1fr;
     transition: all ease 750ms;  
     opacity: 0;
 }
-
+/* ------------------ SHOWS APPOINTMENT SECTION ------------ */
 .active-sect {
     opacity: 1;
     z-index: 99;
@@ -274,7 +272,9 @@ li:nth-of-type(3) .active-link:after {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
 }
 
 form {
