@@ -94,3 +94,17 @@ $('.drink-radio').each(function() {
         $('#drink-choices p').html('Drink: ' + this.value)
     })
 })
+
+// THIS WILL FIX MOBILE INPUT FOCUS KEYBOARD ISSUE
+
+let windowResizeMobileFocus = 0;
+
+$(document).ready(function() {
+    windowResizeMobileFocus = $(window).height()
+})
+
+$('.focused-mobile').each(function() {
+    $(this).blur(function() {
+            $('body').css('height', `${windowResizeMobileFocus}px`);
+    })
+})
