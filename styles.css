@@ -267,6 +267,7 @@ form {
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+    padding: 0 10px 0px 0px;
 }
 
 .form-title {
@@ -285,47 +286,34 @@ form {
     position: relative;
 }
 
-form div {
+form p {
+    width: 100%;
+    text-align: center;
+}
+
+.name-form-cont,
+    .contact-form-cont {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    
+    margin: 10px auto;
+    width: 100%;
 }
 
 input {
-    margin: 10px;
     padding: 10px;
     font-size: 1.25rem;
-    width: 100%;
+    width: 47.5%;
     background-color: #fff;
     background-image: url(clean-textile.png);
     border: 1px solid #000;
-    border-radius: 5px;
-    
-}
-
-.divided-form-cont {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.date-cont,
-    .drink-selection-cont {
-    width: 47.5%;
-    margin: 0 1.5%;
-}
-
-.cut-type-cont {
-    width: 100%;
-    margin: 0 auto;
-    flex-direction: column;
+    border-radius: 5px; 
+    text-align: center;
 }
 
 .service {
-    width: 97%;
+    width: 100%;
     padding: 10px;
-    margin: 10px;
+    margin: 10px auto;
     font-size: 1.25rem;
     border-radius: 5px;
     border: 1px solid #000;
@@ -334,11 +322,18 @@ input {
     cursor: pointer;
 }
 
-.drink-choices,
-.date {
+.divided-form-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+}
+
+.drink-choices,
+    .date {
+    width: 47.5%;
     padding: 10px;
-    margin: 10px 0px;
+    margin: 10px 0;
     font-size: 1.25rem;
     border-radius: 5px;
     border: 1px solid #000;
@@ -590,30 +585,26 @@ input[type=radio]:checked + div {
         }
     }
 
+    input {
+        
+    }
+
     .divided-form-cont {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
     }
-    
-    .date-cont {
-        width: 100%;
-    }
-    
-    .drink-selection-cont {
-        width: 100%;
-    }
 
     .date,
-        .drink-choices {
-            width: 97%;
+        .drink-choices,
+            .service {
+            width: 100%;
             margin: 10px auto;
+            text-align: center;
         }
     
-    .cut-type-cont {
-        width: 100%;
-    }
+ 
 }
 
 @media (max-width: 650px) {
@@ -683,7 +674,7 @@ input[type=radio]:checked + div {
         margin-left: 5%;
     }
 
-    .form-title, p {
+    .form-title {
         color: #fff; 
         text-shadow: -1px 0px 1px #000;
     }
@@ -698,6 +689,11 @@ input[type=radio]:checked + div {
         z-index: 99;
         height: 100%;
         width: 100%;
+        border: 1px solid red;
+    }
+
+    form {
+        padding: 10px;
     }
 
     .appointment-img {
@@ -723,7 +719,8 @@ input[type=radio]:checked + div {
     .service,
         .drink-choices,
             .date,
-                input {
+                input,
+                    p {
             font-size: .9rem;
         }
 
