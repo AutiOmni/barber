@@ -11,7 +11,6 @@ html,
     padding: 0px;
     font-family: 'Raleway', sans-serif;
     overflow: hidden;
-    min-height: 100vh;
 }
 
 body {
@@ -194,10 +193,11 @@ li:nth-of-type(3):hover a:after {
 
 section {
     position: absolute;
-    height: calc(100% - 200px);
+    max-height: calc(100% - 200px);
     width: 100vw;
     overflow-x: hidden;
     transform: translateY(500%);
+    border: 1px solid red;
 }
 
 .appointment {
@@ -252,6 +252,8 @@ li:nth-of-type(3) .active-link:after {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid green;
+
 }
 
 .appointment-img img {
@@ -274,6 +276,8 @@ li:nth-of-type(3) .active-link:after {
     justify-content: center;
     border-radius: 5px;
     overflow: hidden;
+    border: 1px solid blue;
+
 }
 
 form {
@@ -285,6 +289,8 @@ form {
     overflow-y: scroll;
     padding: 0px 15px;
     border-radius: 5px;
+    border: 1px solid yellow;
+
 }
 
 form > div {
