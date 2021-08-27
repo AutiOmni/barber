@@ -70,11 +70,6 @@ header {
     white-space: nowrap;
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2.5px;
-    background-color: #000;
-    background-image: url(clean-textile.png);
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-shadow:0.025em  0.025em 0em #232325,
     0.05em  0.05em 0em #fff,
     0.075em  0.075em 0em #232325,
@@ -90,7 +85,6 @@ header {
 }
 
 /* ----------------------------- NAV ----------------------------------- */
-
 
 nav {
     grid-column: 2/3;
@@ -199,7 +193,7 @@ li:nth-of-type(3):hover a:after {
 
 section {
     position: absolute;
-    height: calc(100% - 200px);
+    height: calc(100vh - 200px);
     width: 100vw;
     overflow-x: hidden;
     transform: translateY(500%);
@@ -268,8 +262,14 @@ li:nth-of-type(3) .active-link:after {
     width: 100%;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
 .form-title {
-    margin-top: 5px;
     color: #000;
     width: 100%;
     text-align: center;
@@ -278,21 +278,21 @@ li:nth-of-type(3) .active-link:after {
 
 .appointment-form {
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-row: 1 / 3;
     transition: all ease 750ms;
-    height: 110%;
-    width: 97.5%;
+    height: 100%;
+    width: 100%;
     position: relative;
 }
 
 form div {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    
 }
 
-input,
-    select {
+input {
     margin: 10px;
     padding: 10px;
     font-size: 1.25rem;
@@ -301,29 +301,29 @@ input,
     background-image: url(clean-textile.png);
     border: 1px solid #000;
     border-radius: 5px;
+    
 }
 
 .divided-form-cont {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 10px;
-
 }
 
 .date-cont,
     .drink-selection-cont {
     width: 47.5%;
+    margin: 0 1.5%;
 }
 
 .cut-type-cont {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
     flex-direction: column;
 }
 
 .service {
-    width: 100%;
+    width: 97%;
     padding: 10px;
     margin: 10px;
     font-size: 1.25rem;
@@ -500,9 +500,16 @@ input[type=radio]:checked + div {
 
 /* ------------------ @MEDIA ----------------------- */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
     a {
         font-size: 1.25rem;
+    }
+
+    .service,
+        .drink-choices,
+            .date,
+                 input {
+        font-size: .95rem;
     }
 }
 
@@ -592,21 +599,21 @@ input[type=radio]:checked + div {
     
     .date-cont {
         width: 100%;
-        flex-direction: column;
     }
     
     .drink-selection-cont {
         width: 100%;
-        flex-direction: column;
     }
+
+    .date,
+        .drink-choices {
+            width: 97%;
+            margin: 10px auto;
+        }
     
     .cut-type-cont {
-        width: 95%;
-        flex-direction: column;
+        width: 100%;
     }
-
-
-
 }
 
 @media (max-width: 650px) {
@@ -684,13 +691,13 @@ input[type=radio]:checked + div {
     .appointment-form,
         .appointment-img {
         grid-column: 1/3;
+        grid-row: 1/2;
     }
 
     .appointment-form {
         z-index: 99;
         height: 100%;
         width: 100%;
-        margin-top: 0%;
     }
 
     .appointment-img {
