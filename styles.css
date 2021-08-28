@@ -16,6 +16,7 @@ html,
 
 body {
     background-image: url(clean-textile.png);
+    border: 1px solid red;
 }
 
 a {
