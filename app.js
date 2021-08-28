@@ -97,13 +97,8 @@ $('.drink-radio').each(function() {
 
 // THIS WILL FIX MOBILE INPUT FOCUS KEYBOARD ISSUE
 
-let windowResizeMobileFocus = 0;
-let htmlHeight = 0;
-let bodyHeight = 0;
-
-
 $('.focused-mobile').each(function() {
     $(this).blur(function() {
-        $(window).scrollTo(0,0);
+        $(window).scrollTop(0);
     })
 })

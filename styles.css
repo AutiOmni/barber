@@ -447,6 +447,7 @@ input[type=date] {
     align-items: center;
     justify-content: center;
     margin: 5px 0px;
+    transition: all ease-in-out 250ms;
 }
 
 .drink-box {
@@ -458,11 +459,17 @@ input[type=date] {
     align-items: center;
     justify-content: center;
     margin: 5px 0px;
-
+    transition: all ease-in-out 250ms;
 }
 
-.service-box:active {
+.service-box:active,
+    .drink-box:active {
     transform: scale(.98)
+}
+
+.service-box:hover,
+    .drink-box:hover {
+    box-shadow: 0px 1px 10px #000;
 }
 
 input[type=radio]:checked + div {
