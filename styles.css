@@ -390,7 +390,7 @@ input {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
     transition: transform ease 500ms;
-    transform: translateY(100%);
+    transform: translateX(100%);
 }
 
 .service-modal,
@@ -405,7 +405,7 @@ input {
     justify-content: stretch;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, 100%);
+    transform: translate(100%, -50%);
     border-radius: 5px;
     overflow-y: scroll;
     transition: transform ease 500ms;
