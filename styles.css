@@ -379,7 +379,7 @@ input {
 /* -------------------------- MODAL -------------------------------- */
 
 .modal {
-    display: none;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -389,6 +389,8 @@ input {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
+    transition: transform ease 500ms;
+    transform: translateY(100%);
 }
 
 .service-modal,
@@ -398,12 +400,15 @@ input {
     background-color: #fff;
     background-image:url(clean-textile.png);
     position: absolute;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 100%);
     border-radius: 5px;
     overflow-y: scroll;
+    transition: transform ease 500ms;
 }
 
 .service-modal-title, 
@@ -415,19 +420,15 @@ input {
 }
 
 .modal.active-modal {
-    display: block;
+    transform: translateY(0%);
 }
 
 .modal.active-service-modal .service-modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
+    transform: translate(-50%, -50%);
 }
 
 .modal.active-drinks-modal .drink-modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
+    transform: translate(-50%, -50%);
 }
 
 input[type=radio] {
