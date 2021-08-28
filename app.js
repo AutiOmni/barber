@@ -98,13 +98,24 @@ $('.drink-radio').each(function() {
 // THIS WILL FIX MOBILE INPUT FOCUS KEYBOARD ISSUE
 
 let windowResizeMobileFocus = 0;
+let htmlHeight = 0;
+let bodyHeight = 0;
 
 $(document).ready(function() {
-    windowResizeMobileFocus = $(window).height()
+    bodyHeight = $('body').height()
+})
+
+
+
+$('.focused-mobile').each(function() {
+    $(this).focus(function() {
+            htmlHeight = $('html').height();
+            windowResizeMobileFocus = htmlHeight - bodyHeight
+    })
 })
 
 $('.focused-mobile').each(function() {
     $(this).blur(function() {
-            $('body').css('height', `${windowResizeMobileFocus}px`);
+        $('body').css('transform', `translateY(${windowResizeMobileFocus}px)`);
     })
 })
