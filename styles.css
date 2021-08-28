@@ -14,15 +14,9 @@ html,
     height: 100vh;
 }
 
-html {
-    border: 1px solid green;
-
-}
-
 body {
     background-image: url(clean-textile.png);
-    border: 1px solid red;
-    transform: translateY(0px);
+    transform: translateY(-10px);
 }
 
 a {
