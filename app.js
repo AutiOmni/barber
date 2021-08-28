@@ -116,6 +116,6 @@ $('.focused-mobile').each(function() {
 
 $('.focused-mobile').each(function() {
     $(this).blur(function() {
-        $('body').css('transform', `translateY(-${windowResizeMobileFocus}px)`);
+        $('body').css('transform', `translateY(-${windowResizeMobileFocus * 2}px)`);
     })
 })
