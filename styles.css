@@ -16,7 +16,7 @@ html,
 
 body {
     background-image: url(clean-textile.png);
-    transform: translateY(-10px);
+    transform: translateY(0px);
 }
 
 a {
