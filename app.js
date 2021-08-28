@@ -101,21 +101,9 @@ let windowResizeMobileFocus = 0;
 let htmlHeight = 0;
 let bodyHeight = 0;
 
-$(document).ready(function() {
-    bodyHeight = $('body').height()
-})
-
-
-
-$('.focused-mobile').each(function() {
-    $(this).focus(function() {
-            htmlHeight = $('html').height();
-            windowResizeMobileFocus = htmlHeight - bodyHeight
-    })
-})
 
 $('.focused-mobile').each(function() {
     $(this).blur(function() {
-        $('body').css('transform', `translateY(-${windowResizeMobileFocus * 2}px)`);
+        $(window).scrollTo(0,0);
     })
 })
