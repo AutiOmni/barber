@@ -21,7 +21,6 @@ html {
 
 body {
     background-image: url(clean-textile.png);
-    border: 1px solid red;
 }
 
 a {
@@ -306,7 +305,7 @@ form {
 }
 
 form > div {
-    margin: 10px 0;
+    margin: 7.5px 0;
 }
 
 .form-title {
