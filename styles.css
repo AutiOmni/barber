@@ -398,15 +398,21 @@ input {
 }
 
 .modal-drinks-cont {
-    transform: translateX(100%);
+    transform: translateX(-100%);
 }
 
 .modal-date-cont {
-    transform: translateX(-100%);
+    opacity: 0;
+    display: none;
 }
 
 .modal-cont.active-modal {
     transform: translate(0%, 0%);
+}
+
+.modal-date-cont.active-modal {
+    opacity: 1;
+    display: block;
 }
 
 
