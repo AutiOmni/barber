@@ -394,16 +394,15 @@ input {
 }
 
 .modal-service-cont {
-    transform: translate(100%, 0%);
+    transform: translateX(100%);
 }
 
-
 .modal-drinks-cont {
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 
 .modal-date-cont {
-    transform: translateY(100%);
+    transform: translateX(-100%);
 }
 
 .modal-cont.active-modal {
