@@ -390,7 +390,7 @@ input {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
-    transition: all ease-in-out 750ms;
+    transition: all ease-in-out 500ms;
 }
 
 .modal-service-cont {
