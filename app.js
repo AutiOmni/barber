@@ -61,36 +61,42 @@ $('#submit').click(function(e) {
 })
 
 
-$('#drink-choices').click(function(e) {
-    e.preventDefault()
-})
-
 // MODAL FUNCTIONS
 
 $('#service').click(function() {
-    $('.modal').addClass('active-service-modal active-modal');
+    $('.modal-service-cont').addClass('active-service-modal active-modal');
 })
 
 $('.service-radio').each(function() {
    
     $(this).click(function() {
-        $('.modal').removeClass('active-service-modal active-modal');
+        $('.modal-service-cont').removeClass('active-service-modal active-modal');
         $('#service p').html('Service Selected: ' + this.value)
     })
     
 })
 
-$('.date').click(function() {
-    $('#date-input').focus()
+// DATE FUNCTIONALITY 
+
+$('#date').click(function() {
+    $('.modal-date-cont').addClass('active-date-modal active-modal');
+})
+
+$('#date-input').on('change', function() {
+    let date = $('#date-input').val();
+    let cutDate = date.slice(0,4);
+    let cutDateTwo = date.slice(6,10);
+    $('#date').html(`Appointment Date: ${cutDateTwo+'-'+cutDate}`);
+    $('.modal-date-cont').removeClass('active-date-modal active-modal');
 })
 
 $('.drink-choices').click(function() {
-    $('.modal').addClass('active-drinks-modal active-modal');
+    $('.modal-drinks-cont').addClass('active-drinks-modal active-modal');
 })
 
 $('.drink-radio').each(function() {
     $(this).click(function() {
-        $('.modal').removeClass('active-drinks-modal active-modal');
+        $('.modal-drinks-cont').removeClass('active-drinks-modal active-modal');
         $('#drink-choices p').html('Drink: ' + this.value)
     })
 })
