@@ -108,3 +108,5 @@ $('.focused-mobile').each(function() {
         $(window).scrollTop(0);
     })
 })
+
+
