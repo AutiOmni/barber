@@ -224,20 +224,19 @@ section {
 
 .about h1 {
     width: 100%;
-    text-align: center;
     font-size: 2.5rem;
     margin-bottom: 25px;
     grid-column: 1/2;
     grid-row: 1/2; 
     align-self: center;
     justify-self: center;
+    text-align: center;
 }
 
 .about-text {
     grid-column: 1/2;
     grid-row: 2/4; 
-    padding: 5%;
-
+    padding: 0 5% 5% 5%;
 }
 
 .profile-pic {
@@ -800,6 +799,7 @@ input[type=radio]:checked + div {
             grid-column:1/2;
             align-self: center;
             justify-self: center;
+            padding-left: 5%;
         }
 
         .profile-pic {
