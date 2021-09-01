@@ -224,7 +224,6 @@ section {
 .about h1 {
     width: 100%;
     font-size: 2.5rem;
-    margin-bottom: 25px;
     grid-column: 1/2;
     grid-row: 1/2; 
     align-self: center;
@@ -595,6 +594,9 @@ input[type=radio]:checked + div {
 
 @media (max-width: 850px) {
 
+
+            /* ------------------ NAV ----------------------- */
+
     a {
         font-size: 1.25rem;
         margin-top: 15px;
@@ -670,6 +672,9 @@ input[type=radio]:checked + div {
         }
     }
 
+        /* ------------------ FORM ----------------------- */
+
+
     .service-box,
             .drink-box {       
             font-size: .9rem;
@@ -679,6 +684,9 @@ input[type=radio]:checked + div {
 }
 
 @media (max-width: 700px) {
+
+        /* ------------------ NAV ----------------------- */
+
 
     header {
         grid-template-rows: repeat(4, 1fr);
@@ -749,6 +757,9 @@ input[type=radio]:checked + div {
         margin-left: 5%;
     }
 
+        /* ------------------ FORM ----------------------- */
+
+
     .form-title {
         color: #fff; 
         text-shadow: -1px 0px 1px #000;
@@ -788,7 +799,8 @@ input[type=radio]:checked + div {
             height: 85%;
         }
 
-       
+    /* ------------------ ABOUT ----------------------- */
+
         .about-text {
             grid-row: 3/4;
             grid-column: 1/4;
