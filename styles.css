@@ -235,7 +235,6 @@ section {
     padding: 5%;
 }
 
-
 .profile-pic {
     grid-row: 1/5;
     grid-column: 2/3;
@@ -672,10 +671,6 @@ input[type=radio]:checked + div {
             font-size: .9rem;
         }
 
-        .about-text {
-            padding: 50px 0px 0px 25px;
-        }
-
         .profile-pic img {
             height: 75%;
         }
@@ -788,7 +783,12 @@ input[type=radio]:checked + div {
             font-size: .9rem;
         }
 
-        .about h1 {
+        .profile-pic img {
+            height: 90%;
+        }
+
+        .profile-pic {
+            grid-row: 1/4;
         }
 
 }
