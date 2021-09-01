@@ -785,13 +785,14 @@ input[type=radio]:checked + div {
         }
 
         .profile-pic img {
-            height: 90%;
+            height: 80%;
         }
 
        
         .about-text {
             grid-row: 3/4;
             grid-column: 1/4;
+            padding-bottom: 10%;
         }
 
         .about h1 {
