@@ -486,6 +486,7 @@ input {
     transform: translate(-50%, -50%);
     border-radius: 5px;
     display: block;
+
 }
 
 input[type=date] {
@@ -843,6 +844,7 @@ footer a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
 }
 
 .month-time-holder {
@@ -943,12 +945,13 @@ footer a {
     height: 25px;
     width: 100%;
     position: absolute;
-    bottom: -24px;
+    bottom: -21px;
     left: 0;
     border: 1px solid #000;
     background-color: #cccccc;
     box-shadow: inset 5px -2px 10px #858586, inset -5px -2px 10px #858586;
     cursor: pointer;
+    border-radius: 0 0 5px 5px;
 }
 
 #confirm-date:active p {
