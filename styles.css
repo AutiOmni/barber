@@ -262,6 +262,7 @@ section {
     transform: translateY(500%); 
     transition: all ease 750ms;
 }
+
 /* ------------------ SHOWS APPOINTMENT SECTION ------------ */
 
 .active-sect {
@@ -584,6 +585,19 @@ input[type=radio]:checked + div {
     margin-top: 25px;
 }
 
+/* ------------------ FOOTER ----------------------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    font-size: .75rem;
+}
+
 /* ------------------ @MEDIA ----------------------- */
 
 @media (max-width: 1050px) {
@@ -821,3 +835,93 @@ input[type=radio]:checked + div {
 
 
 
+
+
+.date-cont {
+    border: 1px solid #000;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.month-time-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+#month, #time {
+    font-size: 25px;
+    text-align: center;
+}
+
+.day-holder {
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.weekday-holder {
+    display: flex;
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.weekday-holder div {
+    width: inherit;
+    text-align: center;
+    width: 16.15%;
+    border-right: 1px solid #000;
+}
+
+.weekday-holder div:last-of-type {
+    border-right: none;
+} 
+
+.date-holder {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day-cont {
+    text-align: center;
+    flex-wrap: wrap;
+    width: 14.28%;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.day-pre-cont {
+    text-align: center;
+    flex-wrap: wrap;
+    width: 14.28%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+
+.day-cont:hover p {
+    background-color: #acaccf;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.active-date-reserve p {
+    background-color: #acaccf;
+    border-radius: 50%;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+}

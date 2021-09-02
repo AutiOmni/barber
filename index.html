@@ -158,10 +158,66 @@
                     <div class="modal-date-cont modal-cont" id="modal">
 
                                 <div class="date-modal" id="drink-modal">
-                                    <p class="date-modal-title">Confirm Appointment Date: </p>
-                                    <input id="date-input" type="date" required>
-                                    <input type="time">
-                                    <div class="date confirm">Confirm</div>
+                  <div class="date-cont">
+                    <div class="month-time-holder">
+
+                        <div class="month-cont">
+                            
+                            <select name="month" id="month">
+                                <option value="0">January</option>
+                                <option value="1">February</option>
+                                <option value="2">March</option>
+                                <option value="3">April</option>
+                                <option value="4">May</option>
+                                <option value="5">June</option>
+                                <option value="6">July</option>
+                                <option value="7">August</option>
+                                <option value="8">September</option>
+                                <option value="9">October</option>
+                                <option value="10">November</option>
+                                <option value="11">December</option>
+                            </select>
+                            <select name="time" id="time">
+                                <option value="">10:00 AM</option>
+                                <option value="">10:30 AM</option>
+                                <option value="">11:00 AM</option>
+                                <option value="">11:30 AM</option>
+                                <option value="">12:00 PM</option>
+                                <option value="">12:30 PM</option>
+                                <option value="">1:00 PM</option>
+                                <option value="">1:30 PM</option>
+                                <option value="">2:00 PM</option>
+                                <option value="">2:30 PM</option>
+                                <option value="">3:00 PM</option>
+                                <option value="">3:30 PM</option>
+                                <option value="">4:00 PM</option>
+                                <option value="">4:30 PM</option>
+                                <option value="">5:00 PM</option>
+                                <option value="">5:30 PM</option>
+                                <option value="">6:00 PM</option>
+                                <option value="">6:30 PM</option>
+                                <option value="">7:00 PM</option>
+                                <option value="">7:30 PM</option>
+                                <option value="">8:00 PM</option>
+                                <option value="">8:30 PM</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="day-holder">
+                        <div class="weekday-holder">
+                            <div><p>S</p></div>
+                            <div><p>M</p></div>
+                            <div><p>T</p></div>
+                            <div><p>W</p></div>
+                            <div><p>T</p></div>
+                            <div><p>F</p></div>
+                            <div><p>S</p></div>
+                        </div>
+                        <div class="date-holder">
+                        </div>
+                    </div>
+                </div>
                                 </div>
 
                     </div> <!--END OF MAIN MODAL CONT-->
@@ -204,16 +260,16 @@
             </div>
 
         </section>
-
-        <section class="gallery">
-            
+  
+        <section  class="gallery">
+            <div class="insta-cont" id="instafeed"></div>
         </section>
 
         <section class="about">
                 <div class="profile-pic">
                     <img src="barberHimself.png" alt="Barber Bo">
                 </div>
-                
+
                 <h1>Your Barber</h1>
 
                 <div class="about-text">
@@ -224,6 +280,12 @@
 
        </main>
 
+       <footer>
+           <a target="_blank" href="https://www.freeprivacypolicy.com/live/bd881601-c82e-4b9b-b2f2-411052bcbe38">Privacy Policy</a>
+       </footer>
        <script src="app.js"></script>
+       <script src="date.js"></script>
+
     </body>
+    
 </html>
