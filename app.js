@@ -82,11 +82,7 @@ $('#date').click(function() {
     $('.modal-date-cont').addClass('active-date-modal active-modal');
 })
 
-$('#date-input').on('change', function() {
-    let date = $('#date-input').val();
-    let cutDate = date.slice(0,4);
-    let cutDateTwo = date.slice(6,10);
-    $('#date').html(`Appointment Date: ${cutDateTwo+'-'+cutDate}`);
+$('#confirm-date').on('click', function() {
     $('.modal-date-cont').removeClass('active-date-modal active-modal');
 })
 
@@ -108,5 +104,3 @@ $('.focused-mobile').each(function() {
         $(window).scrollTop(0);
     })
 })
-
-
