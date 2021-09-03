@@ -480,11 +480,11 @@ input {
     background-image:url(clean-textile.png);
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
     display: block;
-
+    width: 75%;
 }
 
 input[type=date] {
@@ -614,7 +614,7 @@ input[type=radio]:checked + div {
 }
 
 .day-holder {
-    width: 300px;
+    width: 100%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
