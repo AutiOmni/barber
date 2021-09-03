@@ -83,6 +83,8 @@ $('#date').click(function() {
 })
 
 $('#confirm-date').on('click', function() {
+  
+    convertDate();
     $('.modal-date-cont').removeClass('active-date-modal active-modal');
 })
 
@@ -104,3 +106,33 @@ $('.focused-mobile').each(function() {
         $(window).scrollTop(0);
     })
 })
+
+
+function convertDate() {
+   
+    var month = $('#month').val()
+    var time = $('#time').val()
+    var date = $('.active-date-reserve').text()
+
+    const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    
+    if (date == 1 || date == 21 || date == 31)
+    {
+        date = date + 'st'
+    }
+    else if (date == 2 || date == 22)
+    {
+        date = date + 'nd'
+    }
+    else if (date == 3 || date == 23)
+    {
+        date = date + 'rd'
+    }
+    else 
+    {
+        date = date + 'th'
+    }
+
+    $('#date').html(`Appointment Date & Time: ${monthArr[month]} ${date} at ${time}`)
+
+}
