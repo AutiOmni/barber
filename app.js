@@ -83,7 +83,7 @@ $('#date').click(function() {
 })
 
 $('#confirm-date').on('click', function() {
-  
+    
     convertDate();
     $('.modal-date-cont').removeClass('active-date-modal active-modal');
 })
@@ -107,12 +107,20 @@ $('.focused-mobile').each(function() {
     })
 })
 
+$('select').each(function() {
+    $(this).on('change', function() {
+        $(window).scrollTop(0)
+        console.log('changed')
+    })
+})
 
+// CONVERT DATE TO STRING FOR FORM
 function convertDate() {
    
     var month = $('#month').val()
     var time = $('#time').val()
     var date = $('.active-date-reserve').text()
+    console.log(date)
 
     const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     
@@ -131,6 +139,13 @@ function convertDate() {
     else 
     {
         date = date + 'th'
+    }
+
+    const currentDate = new Date;
+
+    if (month < currentDate.getMonth())
+    {
+        alert('Time Travel is dangerous. Please select a future date');
     }
 
     $('#date').html(`Appointment Date & Time: ${monthArr[month]} ${date} at ${time}`)
