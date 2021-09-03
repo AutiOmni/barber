@@ -71,7 +71,7 @@ $('.service-radio').each(function() {
    
     $(this).click(function() {
         $('.modal-service-cont').removeClass('active-service-modal active-modal');
-        $('#service p').html('Service Selected: ' + this.value)
+        $('#service p').html('Service Selected : ' + this.value)
     })
     
 })
@@ -83,7 +83,6 @@ $('#date').click(function() {
 })
 
 $('#confirm-date').on('click', function() {
-    
     convertDate();
     $('.modal-date-cont').removeClass('active-date-modal active-modal');
 })
@@ -95,7 +94,7 @@ $('.drink-choices').click(function() {
 $('.drink-radio').each(function() {
     $(this).click(function() {
         $('.modal-drinks-cont').removeClass('active-drinks-modal active-modal');
-        $('#drink-choices p').html('Drink: ' + this.value)
+        $('#drink-choices p').html('Drink : ' + this.value)
     })
 })
 
@@ -110,17 +109,15 @@ $('.focused-mobile').each(function() {
 $('select').each(function() {
     $(this).on('change', function() {
         $(window).scrollTop(0)
-        console.log('changed')
     })
 })
 
 // CONVERT DATE TO STRING FOR FORM
 function convertDate() {
    
-    var month = $('#month').val()
-    var time = $('#time').val()
-    var date = $('.active-date-reserve').text()
-    console.log(date)
+    var month = $('#month').val();
+    var time = $('#time').val();
+    var date = $('.active-date-reserve').text();
 
     const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     
@@ -148,6 +145,24 @@ function convertDate() {
         alert('Time Travel is dangerous. Please select a future date');
     }
 
-    $('#date').html(`Appointment Date & Time: ${monthArr[month]} ${date} at ${time}`)
+    const sliceTime = time.slice(0,2);
+    let sliceTimeEnd = time.slice(3,5)
+    let timeSub = parseInt(sliceTime);
+console.log(sliceTimeEnd)
+    if (timeSub > 12)
+    {
+        timeSub = `${timeSub - 12}`;
+        sliceTimeEnd = `${sliceTimeEnd} PM`
+    }
+    else
+    {
+        timeSub = `${timeSub}`
+        sliceTimeEnd = `${sliceTimeEnd} AM`
+    }
+
+    var finalTime = `${timeSub}:${sliceTimeEnd}`
+
+    console.log(time, sliceTime, timeSub)
+    $('#date').html(`Appointment Date & Time : ${monthArr[month]} ${date} at ${finalTime}`)
 
 }

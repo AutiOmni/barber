@@ -1,13 +1,33 @@
 
 const dateSelect = document.getElementById('month');
+const timeSelect = document.getElementById('time');
 const dateHolder = document.querySelector('.date-holder');
 // DATE STUFF ----------------
 const date = new Date;
 const year = date.getFullYear()
 let month = date.getMonth();
 let day = date.getDay();
+let today = date.getDate();
+let timeHour = date.getHours();
+let timeMinutes = date.getMinutes();
+
+// SETING CURRENT TIME ------------------------
+timeMinutes = `0${timeMinutes}`
+
+if (timeMinutes >= 00) 
+{
+    timeMinutes = '30';
+}
+else if (timeMinutes >= 30)
+{
+    timeMinutes = '00';
+}
+
+timeHour = timeHour + 1;
 
 
+const time = `${timeHour}:${timeMinutes}`
+timeSelect.value = time
 
 // START OF CALENDAR ON LOAD ----------------------------
 startMonthDay(month, year, getCalendar)
@@ -237,7 +257,22 @@ async function reserveDate() {
 
     await makeCalendar
 
+    
+
     const daySelect = document.querySelectorAll('.day-cont');
+
+    function addCurrentDate() {
+        daySelect.forEach(day => {
+                if (day.innerText == today && dateSelect.value == month) 
+                {
+                day.classList.add('active-date-reserve');
+                }
+                // find way to start at the first of new month
+            })    
+    } 
+
+    addCurrentDate();
+
     // FUNCTION FOR REMOVING CLASS
     function removeClassDate() {
         daySelect.forEach(day => {
@@ -249,14 +284,13 @@ async function reserveDate() {
 
         day.addEventListener('click',() => {
             removeClassDate();
+            console.log(day.innerText)
             day.classList.add('active-date-reserve');
 
     })
 });
 
 }
-
-
 
     
 

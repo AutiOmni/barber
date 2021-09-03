@@ -601,8 +601,9 @@ input[type=radio]:checked + div {
 .month-time-holder {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px 0px;
+    width: 100%;
 }
 
 #month, #time {
@@ -610,7 +611,8 @@ input[type=radio]:checked + div {
     text-align: center;
     background-color: #fff;
     background-image: url(clean-textile.png);
-    border: none;
+    border:none;
+    width:45%; 
 }
 
 .day-holder {
@@ -693,16 +695,19 @@ input[type=radio]:checked + div {
 }
 
 #confirm-date {
-    height: 25px;
+    height: 50px;
     width: 100%;
     position: absolute;
-    bottom: -21px;
+    bottom: -46px;
     left: 0;
     border: 1px solid #000;
     background-color: #cccccc;
     box-shadow: inset 5px -2px 10px #858586, inset -5px -2px 10px #858586;
     cursor: pointer;
     border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #confirm-date:active p {
