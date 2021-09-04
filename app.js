@@ -57,7 +57,6 @@ appointmentTransition()
 $('#submit').click(function(e) {
     e.preventDefault()
 
-    console.log($('.date').val())
 })
 
 
@@ -84,6 +83,30 @@ $('#date').click(function() {
 
 $('#confirm-date').on('click', function() {
     convertDate();
+// CHECKS THAT ENTERED DATE IS VALID AND NO PAST
+    const currentDate = new Date;
+    var slicedTime = $('#time').val().slice(0,2);
+    var numTime = parseInt(slicedTime)
+    console.log(currentDate.getHours(), numTime)
+// CHECK FOR CURRENT MONTH OR GREATER
+    if (month < currentDate.getMonth())
+    {
+        alert('Time Travel is dangerous. Please select a future date and time.');
+        return convertDate;
+    }
+// CHECK LESS THAN CURRENT DATE
+    if ($('.active-date-reserve').text() < currentDate.getDate() && numTime < currentDate.getHours())
+    {
+        alert('Time Travel is dangerous. Please select a future date and time.');
+        return convertDate;
+    }
+// CHECK FOR SAME DAY TIME
+    if ($('.active-date-reserve').text() == currentDate.getDate() && numTime < currentDate.getHours())
+    {
+        alert('Time Travel is dangerous. Please select a future date and time.');
+        return convertDate;
+    }
+
     $('.modal-date-cont').removeClass('active-date-modal active-modal');
 })
 
@@ -120,7 +143,7 @@ function convertDate() {
     var date = $('.active-date-reserve').text();
 
     const monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-    
+    // ADJUST DATE FOR DISPLAY
     if (date == 1 || date == 21 || date == 31)
     {
         date = date + 'st'
@@ -137,18 +160,11 @@ function convertDate() {
     {
         date = date + 'th'
     }
-
-    const currentDate = new Date;
-
-    if (month < currentDate.getMonth())
-    {
-        alert('Time Travel is dangerous. Please select a future date');
-    }
-
+    // ADJUST TIME FOR DISPLAY
     const sliceTime = time.slice(0,2);
     let sliceTimeEnd = time.slice(3,5)
     let timeSub = parseInt(sliceTime);
-console.log(sliceTimeEnd)
+
     if (timeSub > 12)
     {
         timeSub = `${timeSub - 12}`;
@@ -162,7 +178,7 @@ console.log(sliceTimeEnd)
 
     var finalTime = `${timeSub}:${sliceTimeEnd}`
 
-    console.log(time, sliceTime, timeSub)
     $('#date').html(`Appointment Date & Time : ${monthArr[month]} ${date} at ${finalTime}`)
-
+    
 }
+

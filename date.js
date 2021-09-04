@@ -14,7 +14,8 @@ let timeMinutes = date.getMinutes();
 // SETING CURRENT TIME ------------------------
 timeMinutes = `0${timeMinutes}`
 
-if (timeMinutes >= 00) 
+// CONVERT TIME ------------
+ if (timeMinutes >= 00) 
 {
     timeMinutes = '30';
 }
@@ -25,9 +26,17 @@ else if (timeMinutes >= 30)
 
 timeHour = timeHour + 1;
 
+// SET TIME FOR NEXT DAY IF PAST OPEN TIMES
+if (timeHour > 20)
+{
+    timeHour = 10;
+    timeMinutes = '00';
+    today = today + 1;
+} 
 
 const time = `${timeHour}:${timeMinutes}`
-timeSelect.value = time
+console.log(time);
+timeSelect.value = time;
 
 // START OF CALENDAR ON LOAD ----------------------------
 startMonthDay(month, year, getCalendar)
