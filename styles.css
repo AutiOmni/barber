@@ -192,7 +192,7 @@ li:nth-of-type(3):hover a:after {
 
 /* ------------------ SECTION ---------------------------------------------------- */
 
-section {
+#section {
     max-height: calc(100% - 200px);
     width: 100vw;
 }
@@ -211,7 +211,6 @@ section {
 
 .about {
     position: absolute;
-    height: 100%;
     transform: translateY(500%);
     transition: all ease 750ms;
     opacity: 0;
@@ -235,14 +234,20 @@ section {
     grid-row: 3/6; 
     padding: 0 5% 5% 5%;
     overflow-y: scroll;
+    transition: all ease 750ms;
 }
 
+.your-barber {
+    transition: all ease 750ms;
+}
 .profile-pic {
     grid-row: 1/6;
     grid-column: 2/3;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all ease 750ms;
+
 }
 .profile-pic img {
     object-fit: cover;
@@ -255,8 +260,6 @@ section {
 
 .gallery {
     opacity: 0;  
-    height: 100%;
-    width: 100vw; 
     transform: translateY(500%); 
     transition: all ease 750ms;
 }
@@ -266,19 +269,30 @@ section {
 .active-sect {
     opacity: 1;
     z-index: 99;
-    transform: translateY(0%);
+    transform: translate(0%, 0%);
 }
 
 /* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
 
-.active-bye .appointment-form {
+.active-bye .profile-pic {
     opacity: 0;
     transform: translate(250%, 0%);
 }
 
-.active-bye .appointment-img {
+.active-bye .about-text,
+.active-bye .your-barber {
     opacity: 0;
     transform: translate(-250%, 0%);
+}
+
+.active-bye .appointment-form {
+    opacity: 0;
+    transform: translate(150%, 0%);
+}
+
+.active-bye .appointment-img {
+    opacity: 0;
+    transform: translate(-150%, 0%);
 }
 
 
@@ -841,7 +855,7 @@ footer a {
         font-size: 17px;
     }
 
-    section {
+    #section {
         height: calc(100% - 300px);
         width: 100vw;
     }   

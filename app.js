@@ -13,15 +13,28 @@ function appointmentTransition() {
         
     }
 
+function galleryTransition() {
+
+        if ($(".about").hasClass('active-sect')) {
+            // THIS IS FOR STYLISTIC REMOVAL OF SECTION
+            $('.about').addClass('active-bye')
+            setTimeout(() => {
+                $('.about').removeClass('active-sect')
+                $('.about').removeClass('active-bye')
+        
+            },500)
+        }
+    }
+
 $('#appointment').click(function() {
     $(this).toggleClass('active-link')
 // TRANSITIONS
 appointmentTransition()
+galleryTransition() 
 // BRINGS UP CURRENT SECTION
     $('.appointment').addClass('active-sect');
 // REMOVES OTHER SECTION ACTIVES
     $('.gallery').removeClass('active-sect');
-    $('.about').removeClass('active-sect');
     $('#gallery').removeClass('active-link');
     $('#about').removeClass('active-link');
 
@@ -31,10 +44,10 @@ $('#gallery').click(function() {
     $(this).toggleClass('active-link')
 // TRANSITIONS
 appointmentTransition()
+galleryTransition() 
 // BRINGS UP CURRENT SECTION
     $('.gallery').toggleClass('active-sect');
 // REMOVES OTHER SECTION ACTIVES
-    $('.about').removeClass('active-sect'); 
     $('#appointment').removeClass('active-link');
     $('#about').removeClass('active-link'); 
       
@@ -44,8 +57,10 @@ $('#about').click(function() {
     $(this).toggleClass('active-link')
 // TRANSITIONS
 appointmentTransition()
+galleryTransition() 
 // BRINGS UP CURRENT SECTION
-    $('.about').toggleClass('active-sect');
+
+$('.about').addClass('active-sect');
 // REMOVES OTHER SECTION ACTIVES
     $('.gallery').removeClass('active-sect');
     $('#appointment').removeClass('active-link');
@@ -87,38 +102,37 @@ $('#confirm-date').on('click', function() {
     const currentDate = new Date;
     var slicedTime = $('#time').val().slice(0,2);
     var numTime = parseInt(slicedTime)
-    console.log(currentDate.getHours(), numTime)
 // CHECK FOR CURRENT MONTH OR GREATER
     if (month < currentDate.getMonth())
     {
-        alert('Time Travel is dangerous. Please select a future date and time.');
+        alert('Time Travel is dangerous. Please select a date or time in the future.');
         return convertDate;
     }
 // CHECK LESS THAN CURRENT DATE
-    if ($('.active-date-reserve').text() < currentDate.getDate() && numTime < currentDate.getHours())
+    if ($('.active-date-reserve').text() < currentDate.getDate())
     {
-        alert('Time Travel is dangerous. Please select a future date and time.');
+        alert('Time Travel is dangerous. Please select a date or time in the future.');
         return convertDate;
     }
 // CHECK FOR SAME DAY TIME
-    if ($('.active-date-reserve').text() == currentDate.getDate() && numTime < currentDate.getHours())
+    if ($('.active-date-reserve').text() == currentDate.getDate() && (numTime <= currentDate.getHours() + 1))
     {
-        alert('Time Travel is dangerous. Please select a future date and time.');
+        alert('Please select an appointment time that is at least an hour ahead of the current time.');
         return convertDate;
     }
 
-    $('.modal-date-cont').removeClass('active-date-modal active-modal');
-})
-
-$('.drink-choices').click(function() {
-    $('.modal-drinks-cont').addClass('active-drinks-modal active-modal');
-})
-
-$('.drink-radio').each(function() {
-    $(this).click(function() {
-        $('.modal-drinks-cont').removeClass('active-drinks-modal active-modal');
-        $('#drink-choices p').html('Drink : ' + this.value)
+        $('.modal-date-cont').removeClass('active-date-modal active-modal');
     })
+
+    $('.drink-choices').click(function() {
+        $('.modal-drinks-cont').addClass('active-drinks-modal active-modal');
+    })
+
+    $('.drink-radio').each(function() {
+        $(this).click(function() {
+            $('.modal-drinks-cont').removeClass('active-drinks-modal active-modal');
+            $('#drink-choices p').html('Drink : ' + this.value)
+        })
 })
 
 // THIS WILL FIX MOBILE INPUT FOCUS KEYBOARD ISSUE
@@ -168,6 +182,10 @@ function convertDate() {
     if (timeSub > 12)
     {
         timeSub = `${timeSub - 12}`;
+        sliceTimeEnd = `${sliceTimeEnd} PM`
+    }
+    else if (timeSub == 12)
+    {
         sliceTimeEnd = `${sliceTimeEnd} PM`
     }
     else
