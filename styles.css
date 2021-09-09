@@ -829,6 +829,7 @@ footer a {
         100% {
             top: -20px;
         }
+
     }
 
         /* ------------------ FORM ----------------------- */
@@ -839,6 +840,9 @@ footer a {
             font-size: .9rem;
         }
 
+        .about-text {
+            grid-row: 2/5
+        }
 
 }
 
@@ -969,6 +973,7 @@ footer a {
         .about-text {
             grid-row: 3/6;
             grid-column: 1/4;
+            margin-top: 25px;
         }
 
         .about h1 {
