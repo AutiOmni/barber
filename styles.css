@@ -321,12 +321,13 @@ li:nth-of-type(3) .active-link:after {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .appointment-img img {
     object-fit: cover;
     object-position: right;
-    height: 95%;
+    height: 100%;
     width: 95%;
     border-radius: 5px;
 }
@@ -357,7 +358,7 @@ form {
 }
 
 form > div {
-    margin: 7.5px 0;
+    margin: 5px 0;
 }
 
 .form-title {
@@ -932,6 +933,11 @@ footer a {
         height: 100%;
         width: 100%;
     }
+
+    .appointment-img {
+        margin-top: 0px;
+    }
+
 
     .appointment-img img {
         width: 100%;
