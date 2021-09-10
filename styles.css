@@ -256,7 +256,7 @@ li:nth-of-type(3):hover a:after {
     border-radius: 5px;
 }
 
-/* -------------------------- ABOUT SECTIONS ----------- */
+/* -------------------------- GALLERY SECTIONS ----------- */
 
 .gallery {
     opacity: 0;  
@@ -355,11 +355,13 @@ form {
     height: 100%;
     overflow-y: scroll;
     padding: 0px 5px;
-    border-radius: 5px;
 }
 
 form > div {
     margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-title {
@@ -402,6 +404,7 @@ input {
     background-color: #fff;
     background-image: url(clean-textile.png);
     cursor: pointer;
+
 }
 
 .drink-choices,
@@ -415,6 +418,7 @@ input {
     background-image: url(clean-textile.png);
     cursor: pointer;
     text-align: center;
+
 }
 
 .service:active,
@@ -435,6 +439,22 @@ input {
     transform: scale(.98)
 }
 
+/* -------------------------- FORM ICONS -------------------------------- */
+
+.hops {
+    position: relative;
+    width: fit-content;
+}
+
+.hops::before {
+    content: url(hop.svg);
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: -7.5px;
+    left: -50px;
+}
+
 /* -------------------------- MODAL -------------------------------- */
 
 .modal-cont {
@@ -452,11 +472,11 @@ input {
 }
 
 .modal-service-cont {
-    transform: translateX(100%);
+    transform: translateX(150%);
 }
 
 .modal-drinks-cont {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
 }
 
 .modal-date-cont {
@@ -920,7 +940,7 @@ footer a {
         margin-left: 5%;
     }
 
-        /* ------------------ FORM ----------------------- */
+        /*------------------FORM----------------------- */
 
 
     .form-title {
