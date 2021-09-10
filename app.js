@@ -201,33 +201,95 @@ function convertDate() {
 }
 
 
-let i = 1;
+let i = 0;
 
 $('#move-gallery-right').on('click', function() {
 
+
     var moveGallery = $('.gallery').width()
 
-    switch (i) {
-        case 1:
-            $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
-            $('#move-gallery-right').css('display', 'none') 
-            $('#move-gallery-left').css('display', 'flex') 
-            i++
-            break;
+    i++
+    console.log(i)
+
+if ($(window).width() > 700) 
+    {
+        switch (i) {
+            case 1:
+                $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                $('#move-gallery-right').css('display', 'none') 
+                $('#move-gallery-left').css('display', 'flex') 
+
+                break;
         }
+    } 
+    else 
+    {
+        switch (i) {
+                case 1:
+                    $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                    $('#move-gallery-left').css('display', 'flex') 
+
+                    break;
+                case 2:
+                    $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+
+                    break;
+                case 3:
+                    $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+
+                    break;
+                case 4:
+                    $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+
+                    break;
+                case 5:
+                    $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                    $('#move-gallery-right').css('display', 'none')
+
+                    break;
+        }
+    }
 
 })
 
 $('#move-gallery-left').on('click', function() {
 
-    i--
+    var moveGallery = $('.gallery').width()
 
+    i--
+    console.log(i)
+
+    if ($(window).width() > 700) 
+    {
      switch (i) {
-         case 1:
+         case 0:
             $('#move-gallery-left').css('display', 'none')
             $('#move-gallery-right').css('display', 'flex') 
             $('.gallery-holder').css('transform', 'translateX(0)')
              break;
         }
-
+    }
+    else 
+    {
+        switch (i) {
+            case 0:
+                $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                $('#move-gallery-left').css('display', 'none')
+                break;
+            case 1: 
+                $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                break;
+            case 2:
+                $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                break;
+            case 3:
+                $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                break;
+            case 4:
+                $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                $('#move-gallery-right').css('display', 'flex') 
+                break;
+        }
+           
+    }
 })

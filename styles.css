@@ -263,10 +263,11 @@ li:nth-of-type(3):hover a:after {
     transition: all ease 750ms;
     height: 100%;
     position: absolute;
+    overflow-y: hidden;
 }
 
 .gallery-holder {
-    width: 200%;
+    width: 200vw;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -312,7 +313,7 @@ li:nth-of-type(3):hover a:after {
 .img-holder {
     border: 1px solid #000;
     width: 15%;
-    height: 90%;
+    height: 400px;
     overflow: hidden;
     position: relative;
     border-radius: 5px;
@@ -1139,5 +1140,15 @@ footer a {
 
         form > div {
             margin: 10px 0;
+        }
+
+        .img-holder {
+            width: 65vw;
+            height: 95%;
+        }
+        
+        .gallery-holder {
+            width: 600vw;
+            height: 100%;
         }
 }
