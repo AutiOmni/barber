@@ -196,7 +196,7 @@ function convertDate() {
 
     var finalTime = `${timeSub}:${sliceTimeEnd}`
 
-    $('#date').html(`Appointment Date & Time : ${monthArr[month]} ${date} at ${finalTime}`)
+    $('.calendar').text(`Appointment Date & Time : ${monthArr[month]} ${date} at ${finalTime}`)
     
 }
 

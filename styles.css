@@ -455,6 +455,34 @@ input {
     left: -50px;
 }
 
+.calendar {
+    position: relative;
+    width: fit-content;
+}
+
+.calendar::before {
+    content: url(calendar.svg);
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: -7.5px;
+    left: -50px;
+}
+
+.cut-type {
+    position: relative;
+    width: fit-content;
+}
+
+.cut-type::before {
+    content: url(barber-shop.svg);
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: -7.5px;
+    left: -50px;
+}
+
 /* -------------------------- MODAL -------------------------------- */
 
 .modal-cont {
@@ -864,6 +892,14 @@ footer a {
             grid-row: 2/5
         }
 
+        .service,
+        .drink-choices,
+            .date, 
+                p {
+                        
+            font-size: .9rem;
+        }
+
 }
 
 @media (max-width: 700px) {
@@ -975,14 +1011,6 @@ footer a {
         .drink-modal-title {
             color: #000;
     }
-
-    .service,
-        .drink-choices,
-            .date, 
-                p {
-                        
-            font-size: .9rem;
-        }
 
         .profile-pic img {
             height: 85%;
