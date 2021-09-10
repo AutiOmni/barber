@@ -205,45 +205,29 @@ let i = 1;
 
 $('#move-gallery-right').on('click', function() {
 
-    if (i !== 4) {
-        $('.gallery-holder').css('transform', `translateX(-${i * 17.5}%)`) 
-        i++
-        
-    } else if (i > 4) {
-        i = 4
-        $('#move-gallery-left').css('display', 'none') 
-    }
-    
-    if (i == 4) {
-        $('#move-gallery-right').css('display', 'none') 
-    }
+    var moveGallery = $('.gallery').width()
 
-    if (i > 1) {
-        $('#move-gallery-left').css('display', 'flex') 
-    }
+    switch (i) {
+        case 1:
+            $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+            $('#move-gallery-right').css('display', 'none') 
+            $('#move-gallery-left').css('display', 'flex') 
+            i++
+            break;
+        }
 
 })
-
 
 $('#move-gallery-left').on('click', function() {
 
     i--
 
      switch (i) {
-         case 0:
-             i = 1
-             break;
          case 1:
             $('#move-gallery-left').css('display', 'none')
+            $('#move-gallery-right').css('display', 'flex') 
             $('.gallery-holder').css('transform', 'translateX(0)')
              break;
-         case 2:
-            $('.gallery-holder').css('transform', `translateX(-17.5%)`)
-            break;
-        case 3:
-            $('.gallery-holder').css('transform', `translateX(-35%)`)
-            $('#move-gallery-right').css('display', 'flex')
-            break;
         }
 
 })
