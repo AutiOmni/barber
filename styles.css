@@ -255,43 +255,114 @@ li:nth-of-type(3):hover a:after {
     border-radius: 5px;
 }
 
-/* -------------------------- GALLERY SECTIONS ----------- */
+/* -------------------------- GALLERY SECTION ----------- */
 
 .gallery {
     opacity: 0;  
     transform: translateY(500%); 
     transition: all ease 750ms;
+    height: 100%;
+    position: absolute;
 }
 
-/* ------------------ SHOWS APPOINTMENT SECTION ------------ */
+.gallery-holder {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all ease-in-out 500ms;
+}
 
-.active-sect {
-    opacity: 1;
+.arrow-right-cont {
+    position: fixed;
     z-index: 99;
-    transform: translate(0%, 0%);
+    right: 0px;
+    height: 100%;
+    width: 50px;
+    background-color:rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
 }
 
-/* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
-
-.active-bye .profile-pic {
-    opacity: 0;
-    transform: translate(250%, 0%);
+.arrow-left-cont {
+    position: fixed;
+    z-index: 99;
+    left: 0px;
+    height: 100%;
+    width: 50px;
+    background-color:rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
 }
 
-.active-bye .about-text,
-.active-bye .your-barber {
-    opacity: 0;
-    transform: translate(-250%, 0%);
+.arrow-right-cont:active p,
+    .arrow-left-cont:active p  {
+    transform: scale(.90);
 }
 
-.active-bye .appointment-form {
-    opacity: 0;
-    transform: translate(150%, 0%);
+.img-holder {
+    border: 1px solid #000;
+    width: 15%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
 }
 
-.active-bye .appointment-img {
-    opacity: 0;
-    transform: translate(-150%, 0%);
+.img-holder p {
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 5px;
+    letter-spacing: 1.5px;
+}
+
+.gallery-before {
+    transition: all ease-in-out 500ms;
+    bottom: 0;
+    transform: translateY(0%);
+}
+
+.gallery-after {
+   bottom: 0;
+   transform: translateY(100%);
+    transition: all ease-in-out 500ms;
+}
+
+.img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.img-holder img:nth-of-type(2) {
+    transform: translateY(100%);
+    transition: transform ease-in-out 500ms;
+}
+
+.img-holder:hover img:nth-of-type(2) {
+    transform: translateY(0%);
+}
+
+.img-holder:hover .gallery-before {
+    transform: translateY(100%);
+}
+.img-holder:hover .gallery-after {
+    transform: translateY(0%);
 }
 
 
@@ -777,6 +848,38 @@ input[type=radio]:checked + div {
 #confirm-date:active p {
     transform: scale(.98);
 }
+
+/* ------------------ SHOWS APPOINTMENT SECTION ------------ */
+
+.active-sect {
+    opacity: 1;
+    z-index: 99;
+    transform: translate(0%, 0%);
+}
+
+/* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
+
+.active-bye .profile-pic {
+    opacity: 0;
+    transform: translate(250%, 0%);
+}
+
+.active-bye .about-text,
+.active-bye .your-barber {
+    opacity: 0;
+    transform: translate(-250%, 0%);
+}
+
+.active-bye .appointment-form {
+    opacity: 0;
+    transform: translate(150%, 0%);
+}
+
+.active-bye .appointment-img {
+    opacity: 0;
+    transform: translate(-150%, 0%);
+}
+
 
 /* ------------------ FOOTER ----------------------- */
 
