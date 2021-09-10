@@ -372,7 +372,6 @@ form > div {
 }
 
 form p {
-    width: 100%;
     text-align: center;
 }
 
@@ -386,6 +385,7 @@ form p {
 input {
     padding: 12px;
     font-size: 1.25rem;
+    font-family: 'Raleway', sans-serif;
     width: 47.5%;
     background-color: #fff;
     background-image: url(clean-textile.png);
@@ -916,6 +916,7 @@ footer a {
 
     input {
         font-size: 17px;
+        font-weight: inherit;
     }
 
     #section {
