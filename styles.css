@@ -443,7 +443,7 @@ input {
 
 .hops {
     position: relative;
-    width: fit-content;
+    width:max-content;
 }
 
 .hops::before {
@@ -457,7 +457,7 @@ input {
 
 .calendar {
     position: relative;
-    width: fit-content;
+    width:max-content;
 }
 
 .calendar::before {
@@ -471,7 +471,7 @@ input {
 
 .cut-type {
     position: relative;
-    width: fit-content;
+    width:max-content;
 }
 
 .cut-type::before {
