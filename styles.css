@@ -497,6 +497,7 @@ input {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
     transition: all ease-in-out 500ms;
+    z-index: 99;
 }
 
 .modal-service-cont {
@@ -990,7 +991,6 @@ footer a {
     }
 
     .appointment-form {
-        z-index: 99;
         height: 100%;
         width: 100%;
     }
