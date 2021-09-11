@@ -85,7 +85,7 @@ $('.service-radio').each(function() {
    
     $(this).click(function() {
         $('.modal-service-cont').removeClass('active-service-modal active-modal');
-        $('#service p').html('Service Selected : ' + this.value)
+        $('#service p').html('Service Selected: ' + this.value)
     })
     
 })
@@ -131,7 +131,7 @@ $('#confirm-date').on('click', function() {
     $('.drink-radio').each(function() {
         $(this).click(function() {
             $('.modal-drinks-cont').removeClass('active-drinks-modal active-modal');
-            $('#drink-choices p').html('Drink : ' + this.value)
+            $('#drink-choices p').html('Drink: ' + this.value)
         })
 })
 
