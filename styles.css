@@ -1147,6 +1147,10 @@ footer a {
             height: 85%;
             margin-bottom: 50px;
         }
+
+        .img-holder img {
+            object-position: top;
+        }
         
         .gallery-holder {
             width: 600vw;
