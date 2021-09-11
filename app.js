@@ -281,6 +281,7 @@ $('#move-gallery-left').on('click', function() {
                 break;
             case 4:
                 $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
+                $('#move-gallery-right').css('display', 'flex')
                 break;
         }
            
