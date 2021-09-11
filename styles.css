@@ -190,6 +190,21 @@ li:nth-of-type(3):hover a:after {
     opacity: 1;
 }
 
+/* ------------------ SECTION ADDING AND HOVER EFFECT STAY ------------------------------- */
+
+li:nth-of-type(1) .active-link:after {
+    opacity: 1;
+}
+
+li:nth-of-type(2) .active-link:after {
+    opacity: 1;
+}
+
+li:nth-of-type(3) .active-link:after {
+    opacity: 1;
+}
+
+
 /* ------------------ SECTION ---------------------------------------------------- */
 
 #section {
@@ -197,17 +212,11 @@ li:nth-of-type(3):hover a:after {
     width: 100vw;
 }
 
-.appointment {
-    position: absolute;
-    transform: translateY(500%);
-    display: grid;
-    grid-template-columns: 45% 55%;
-    grid-template-rows: 1fr 1fr;
-    transition: all ease 750ms;  
-    opacity: 0;
-}
+/* -------------------------- HERO SECTION ---------------------------------------- */
 
-/* -------------------------- GALLERY SECTIONS ----------- */
+
+
+/* -------------------------- ABOUT SECTION --------------------------------------- */
 
 .about {
     position: absolute;
@@ -255,7 +264,7 @@ li:nth-of-type(3):hover a:after {
     border-radius: 5px;
 }
 
-/* -------------------------- GALLERY SECTION ----------- */
+/* -------------------------- GALLERY SECTION ----------------------------------------------------- */
 
 .gallery {
     opacity: 0;  
@@ -367,21 +376,18 @@ li:nth-of-type(3):hover a:after {
 }
 
 
-/* ------------------ SECTION ADDING AND HOVER EFFECT STAY ------------------------------- */
+/* ------------------ APPOINTMENTS SECTION --------------------------------------------------------- */
 
-li:nth-of-type(1) .active-link:after {
-    opacity: 1;
+.appointment {
+    position: absolute;
+    transform: translateY(500%);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr 1fr;
+    transition: all ease 750ms;  
+    opacity: 0;
 }
 
-li:nth-of-type(2) .active-link:after {
-    opacity: 1;
-}
-
-li:nth-of-type(3) .active-link:after {
-    opacity: 1;
-}
-
-/* ------------------ APPOINTMENTS --------------------------------------------------------- */
 
 .appointment-img {
     grid-column: 1 / 2;
@@ -553,7 +559,7 @@ input {
     left: -50px;
 }
 
-/* -------------------------- MODAL -------------------------------- */
+/* -------------------------- MODAL PARTS -------------------------------- */
 
 .modal-cont {
     display: block;
@@ -940,7 +946,7 @@ input[type=radio]:checked + div {
     transform: translate(0%, 0%);
 }
 
-/* -------------------------- THIS IS FOR SLIDING EFFECTS ----------- */
+/* -------------------------- THIS IS FOR SLIDING EFFECTS BETWEEEN SECTIONS ----------- */
 
 .active-bye .profile-pic {
     opacity: 0;
@@ -977,7 +983,7 @@ footer a {
     font-size: .75rem;
 }
 
-/* ------------------ @MEDIA ----------------------- */
+/* ------------------ @MEDIA ---------------------------------------------------------- */
 
 @media (max-width: 1050px) {
     a {
@@ -1026,7 +1032,7 @@ footer a {
 
 @media (max-width: 850px) {
 
-            /* ------------------ NAV ----------------------- */
+/* ------------------ NAV ----------------------- */
 
     a {
         font-size: 1.25rem;
