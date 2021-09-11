@@ -218,7 +218,6 @@ if ($(window).width() > 700)
                 $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
                 $('#move-gallery-right').css('display', 'none') 
                 $('#move-gallery-left').css('display', 'flex') 
-
                 break;
         }
     } 
@@ -228,24 +227,19 @@ if ($(window).width() > 700)
                 case 1:
                     $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
                     $('#move-gallery-left').css('display', 'flex') 
-
                     break;
                 case 2:
                     $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
-
                     break;
                 case 3:
                     $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
-
                     break;
                 case 4:
                     $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
-
                     break;
                 case 5:
                     $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
                     $('#move-gallery-right').css('display', 'none')
-
                     break;
         }
     }
@@ -287,7 +281,6 @@ $('#move-gallery-left').on('click', function() {
                 break;
             case 4:
                 $('.gallery-holder').css('transform', `translateX(-${i * moveGallery}px)`)
-                $('#move-gallery-right').css('display', 'flex') 
                 break;
         }
            
