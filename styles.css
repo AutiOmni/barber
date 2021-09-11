@@ -1144,7 +1144,8 @@ footer a {
 
         .img-holder {
             width: 65vw;
-            height: 95%;
+            height: 80%;
+            margin-bottom: 50px;
         }
         
         .gallery-holder {
