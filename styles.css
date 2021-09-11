@@ -263,7 +263,7 @@ li:nth-of-type(3):hover a:after {
     transition: all ease 750ms;
     height: 100%;
     position: absolute;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .gallery-holder {
