@@ -149,7 +149,7 @@ $('select').each(function() {
     })
 })
 
-// CONVERT DATE TO STRING FOR FORM
+// CONVERT DATE AND TIME TO STRING FOR FORM ----------------------------
 function convertDate() {
    
     var month = $('#month').val();
@@ -199,7 +199,12 @@ function convertDate() {
     $('.calendar').text(`Appointment: ${monthArr[month]} ${date} at ${finalTime}`)
     
 }
+// CLOSE CALENDAR ---------------------------------
+$('.close-cal').click(function() {
+    $('.modal-date-cont').removeClass('active-date-modal active-modal');
+})
 
+// ADJUSTS THE GALLERY FROM USE DEPENDING ON SCREEN SIZE -----------------------
 
 let i = 0;
 
@@ -245,6 +250,8 @@ if ($(window).width() > 700)
     }
 
 })
+
+
 
 $('#move-gallery-left').on('click', function() {
 

@@ -11,7 +11,7 @@ html,
     padding: 0px;
     font-family: 'Raleway', sans-serif;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
 }
 
 body {
@@ -264,6 +264,7 @@ li:nth-of-type(3):hover a:after {
     height: 100%;
     position: absolute;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .gallery-holder {
@@ -749,6 +750,19 @@ input[type=radio]:checked + div {
     background-image: url(clean-textile.png);
     border:none;
     width:45%; 
+}
+
+.close-cal {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: -27px;
+    right: 5px;
+}
+
+.close-cal:active {
+    transform: scale(.95)
 }
 
 .day-holder {
