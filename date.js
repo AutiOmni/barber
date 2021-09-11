@@ -27,15 +27,18 @@ else if (timeMinutes >= 30)
 timeHour = timeHour + 1;
 
 // SET TIME FOR NEXT DAY IF PAST OPEN TIMES
-if (timeHour > 20)
+if (timeHour > 17)
 {
     timeHour = 10;
     timeMinutes = '00';
     today = today + 1;
 } 
+//SET TIME FOR BEFORE OPEN
+if (timeHour < 10) {
+    timeHour = 10
+}
 
 const time = `${timeHour}:${timeMinutes}`
-console.log(time);
 timeSelect.value = time;
 
 // START OF CALENDAR ON LOAD ----------------------------
@@ -197,7 +200,7 @@ let dTrack = monthDays;
 function makeCalendar(dayNum, dayNumPlus, monNum, pMonNum) 
 {
     // CLEAR HTML FOR NEW MONTH
-    dateHolder.innerHTML = '';
+    dateHolder.innerText = '';
     // MAKE CALENDAR
     if (dayNum == 0) 
     {
@@ -266,8 +269,6 @@ async function reserveDate() {
 
     await makeCalendar
 
-    
-
     const daySelect = document.querySelectorAll('.day-cont');
 
     function addCurrentDate() {
@@ -293,7 +294,6 @@ async function reserveDate() {
 
         day.addEventListener('click',() => {
             removeClassDate();
-            console.log(day.innerText)
             day.classList.add('active-date-reserve');
 
     })
