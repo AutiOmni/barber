@@ -148,7 +148,7 @@ li:first-of-type:hover a:before {
 
 li:nth-of-type(1) a:after {
     position: absolute;
-    content: url(scissors.svg);
+    content: url(svgs/scissors.svg);
     right: -17px;
     opacity: 0;
     transition: all ease 250ms;
@@ -162,7 +162,7 @@ li:nth-of-type(1):hover a:after {
 
 li:nth-of-type(2) a:after {
     position: absolute;
-    content: url(camera.svg);
+    content: url(svgs/camera.svg);
     opacity: 0;
     bottom: -5px;
     left: 85%; 
@@ -177,7 +177,7 @@ li:nth-of-type(2):hover a:after {
 
 li:nth-of-type(3) a:after {
     position: absolute;
-    content: url(barber-pole.svg);
+    content: url(svgs/barber-pole.svg);
     opacity: 0;
     bottom: -1px;
     left: 85%; 
@@ -518,7 +518,7 @@ input {
 }
 
 .hops::before {
-    content: url(hop.svg);
+    content: url(svgs/hop.svg);
     position: absolute;
     height: 35px;
     width: 35px;
@@ -532,7 +532,7 @@ input {
 }
 
 .calendar::before {
-    content: url(calendar.svg);
+    content: url(svgs/calendar.svg);
     position: absolute;
     height: 35px;
     width: 35px;
@@ -546,7 +546,7 @@ input {
 }
 
 .cut-type::before {
-    content: url(barber-shop.svg);
+    content: url(svgs/barber-shop.svg);
     position: absolute;
     height: 35px;
     width: 35px;
@@ -649,13 +649,80 @@ input[type=radio] {
     height: 100px;
     border: 1px solid #000;
     border-radius: 5px;
+    text-align: center;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 5px 0px;
     transition: all ease-in-out 250ms;
+    position: relative;
 }
+
+.haircut-service::before {
+    content: url(svgs/scissorsService.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 10px;
+}
+.hair-beard-service::before {
+    content: url(svgs/scissorsService.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 10px;
+}
+.hair-beard-service::after {
+    content: url(svgs/hair-clipper.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 10px;
+}
+.hair-shave-service::before {
+    content: url(svgs/scissorsService.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 10px;
+}
+.hair-shave-service::after {
+    content: url(svgs/razor.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 10px;
+}
+.beard-service::before {
+    content: url(svgs/hair-clipper.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 10px;
+}
+.shave-service::before {
+    content: url(svgs/razor.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 10px;
+}
+.child-hair-service::before {
+    content: url(svgs/scissorsService.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 10px;
+}
+.child-hair-service::after {
+    content: url(svgs/comb.svg);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 10px;
+}
+
 
 .drink-box {
     height: 75px;
@@ -757,8 +824,10 @@ input[type=radio]:checked + div {
     font-size: 25px;
     cursor: pointer;
     position: absolute;
-    top: -27px;
-    right: 5px;
+    top: 5px;
+    right: -30px;
+    writing-mode:vertical-rl;
+    text-shadow: -2px -2px 1px #000;
 }
 
 .close-cal:active {
@@ -915,6 +984,45 @@ footer a {
     a {
         font-size: 1.25rem;
     }
+
+    .haircut-service::before {
+        height: 30px;
+        width: 30px;
+    }
+    .hair-beard-service::before {
+        height: 30px;
+        width: 30px;
+    }
+    .hair-beard-service::after {
+        height: 30px;
+        width: 30px;
+    }
+    .hair-shave-service::before {
+        height: 30px;
+        width: 30px;
+    }
+    .hair-shave-service::after {
+        height: 30px;
+        width: 30px;
+    }
+    .beard-service::before {
+        height: 30px;
+        width: 30px;
+    }
+    .shave-service::before {
+        height: 30px;
+        width: 30px;
+    }
+    .child-hair-service::before {
+        height: 30px;
+        width: 30px;
+    }
+    .child-hair-service::after {
+        height: 30px;
+        width: 30px;
+    }
+
+
 }
 
 @media (max-width: 850px) {
@@ -966,7 +1074,7 @@ footer a {
     .active-link:after {
         animation-name: active-link-icon;
         animation-timing-function: ease-in-out;
-        animation-duration: 3000ms;
+        animation-duration: 2000ms;
         animation-iteration-count: infinite;
     }
 
