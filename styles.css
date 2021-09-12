@@ -225,7 +225,6 @@ li:nth-of-type(3) .active-link:after {
 .right-hero {
     overflow: hidden;
     width: 50%;
-    border: 1px solid red;
     height: 100%;
     position: relative;
 }
@@ -233,7 +232,6 @@ li:nth-of-type(3) .active-link:after {
 .left-hero {
     overflow: hidden;
     width: 50%;
-    border: 1px solid blue;
     height: 100%;
     position: relative;
 }
@@ -251,56 +249,61 @@ li:nth-of-type(3) .active-link:after {
 
 .hero-img-cont img {
     height: 95%;
-    width: 80%;
+    width: 90%;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
 }
 
 .hero-one {
-    
+    transition: transform ease-in-out 1000ms;
+    transform: translate(0% , 0%);
+    opacity: 1;
 }
 .hero-two {
-
+    transition:transform ease-in-out 1000ms;
+    transform: translate(0%, 0%);
+    opacity: 1;
 }
 .hero-three {
-    display: none;
+    transition: transform ease-in-out 1000ms;
+    transform: translate(-100%, 0%);
+    opacity: 1;
 }
-.hero-four {
-    display: none;
-
+.hero-four {    
+    transition: transform ease-in-out 1000ms;
+    transform: translate(100%, 0%);
+    opacity: 1;
 }
 .hero-five {
-    display: none;
-
+    transition: transform ease-in-out 1000ms;
+    transform: translate(0%, 100%);
+    opacity: 1;
 }
 .hero-six {
-    display: none;
-
+    transition: transform ease-in-out 1000ms;
+    transform: translate(0%, 100%);
+    opacity: 1;
 }
 .hero-seven {
-    display: none;
-
+    transition: transform ease-in-out 1000ms;
+    transform: translate(100%, 0%);
+    opacity: 1;
 }
 .hero-eight {
-    display: none;
-
+    transition: transform ease-in-out 1000ms;
+    transform: translate(-100%, 0%);
+    opacity: 1;
 }
 .hero-nine {
-    display: none;
-
+    transition: transform ease-in-out 1000ms;
+    transform: translate(0%, -100%);
+    opacity: 1;
 }
 .hero-ten {
-    display: none;
-
-}
-.hero-eleven {
-    display: none;
-
-}
-.hero-twelve {
-    display: none;
-
+    transition: transform ease-in-out 1000ms;
+    transform: translate(0%, -100%);
+    opacity: 1;
 }
 
 .active-hero {
