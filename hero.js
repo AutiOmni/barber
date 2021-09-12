@@ -3,7 +3,7 @@ function heroSlider() {
 setTimeout(() => {
 
     // PUT IMAGES BACK IN PLACE FOR NEXT ROTATION
-    $('.hero-nine').css({'opacity': '0', 'transform': 'translate(0%, -100%)'})
+    $('.hero-nine').css({'opacity': '0', 'transform': 'translate(0%, 100%)'})
     $('.hero-ten').css({'opacity': '0', 'transform': 'translate(0%, -100%)'})
 
     $('.hero-seven').css('opacity', '1')
@@ -25,7 +25,7 @@ setTimeout(() => {
 }, 3000);
 
 setTimeout(() => {
-    $('.hero-three').css('transform', 'translate(0%, -100%)')
+    $('.hero-three').css('transform', 'translate(0%, 100%)')
     $('.hero-four').css('transform', 'translate(0%, -100%)')
 
     // PUT IMAGES BACK IN PLACE FOR NEXT ROTATION
@@ -60,14 +60,14 @@ setTimeout(() => {
 }, 9000);
 
 setTimeout(() => {
-    $('.hero-seven').css('transform', 'translate(0%, 100%)')
+    $('.hero-seven').css('transform', 'translate(0%, -100%)')
     $('.hero-eight').css('transform', 'translate(0%, 100%)')
 
     // PUT IMAGES BACK IN PLACE FOR NEXT ROTATION
      $('.hero-three').css('opacity', '1')
      $('.hero-four').css('opacity', '1')
      // PUT IMAGES BACK IN PLACE FOR NEXT ROTATION
-     $('.hero-five').css({'opacity': '0', 'transform': 'translate(0%, 100%)'})
+     $('.hero-five').css({'opacity': '0', 'transform': 'translate(0%, -100%)'})
      $('.hero-six').css({'opacity': '0', 'transform': 'translate(0%, 100%)'})
 
     $('.hero-nine').css('transform', 'translate(0%, 0%)')
@@ -94,7 +94,7 @@ setTimeout(() => {
     $('.hero-twelve').css('transform', 'translate(0%, -100%)')
 
         // PUT IMAGES BACK IN PLACE FOR NEXT ROTATION
-        $('.hero-nine').css({'opacity': '0', 'transform': 'translate(0%, -100%)'})
+        $('.hero-nine').css({'opacity': '0', 'transform': 'translate(0%, 100%)'})
         $('.hero-ten').css({'opacity': '0', 'transform': 'translate(0%, -100%)'})
 
         $('.hero-seven').css('opacity', '1')

@@ -279,7 +279,7 @@ li:nth-of-type(3) .active-link:after {
 }
 .hero-five {
     transition: transform ease-in-out 1000ms;
-    transform: translate(0%, 100%);
+    transform: translate(0%, -100%);
     opacity: 1;
 }
 .hero-six {
@@ -299,7 +299,7 @@ li:nth-of-type(3) .active-link:after {
 }
 .hero-nine {
     transition: transform ease-in-out 1000ms;
-    transform: translate(0%, -100%);
+    transform: translate(0%, 100%);
     opacity: 1;
 }
 .hero-ten {
