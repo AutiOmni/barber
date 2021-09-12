@@ -9,32 +9,70 @@ function appointmentTransition() {
             $('.appointment').removeClass('active-bye')
     
          },500)
-       }
-        
+       } 
     }
 
-function galleryTransition() {
+function aboutTransition() {
 
-        if ($(".about").hasClass('active-sect')) {
+        if ($('.about').hasClass('active-sect')) {
             // THIS IS FOR STYLISTIC REMOVAL OF SECTION
             $('.about').addClass('active-bye')
             setTimeout(() => {
                 $('.about').removeClass('active-sect')
                 $('.about').removeClass('active-bye')
-        
             },500)
         }
     }
+
+function galleryTransition() {
+
+        if ($('.gallery').hasClass('active-sect')) {
+            // THIS IS FOR STYLISTIC REMOVAL OF SECTION
+            $('.gallery').addClass('active-bye')
+            setTimeout(() => {
+                $('.gallery').removeClass('active-sect')
+            },250)
+        }
+    }
+
+function heroCheck() {
+
+    if ($('.appointment').hasClass('active-sect')) {
+        $('.hero').addClass('active-hero')
+    } else {
+        setTimeout(() => {
+            $('.hero').removeClass('active-hero')
+        }, 750)
+    }
+
+    if ($('.about').hasClass('active-sect')) {
+        $('.hero').addClass('active-hero')
+    } else {
+        setTimeout(() => {
+            $('.hero').removeClass('active-hero')
+        }, 750)
+    }
+
+    if ($('.gallery').hasClass('active-sect')) {
+        $('.hero').addClass('active-hero')
+    } else {
+        setTimeout(() => {
+            $('.hero').removeClass('active-hero')
+        }, 750)
+    }
+}
 
 $('#appointment').click(function() {
     $(this).toggleClass('active-link')
 // TRANSITIONS
 appointmentTransition()
-galleryTransition() 
+aboutTransition()
+galleryTransition()
 // BRINGS UP CURRENT SECTION
     $('.appointment').addClass('active-sect');
+// MAKES HERO VISIBLE OR NOT 
+heroCheck()
 // REMOVES OTHER SECTION ACTIVES
-    $('.gallery').removeClass('active-sect');
     $('#gallery').removeClass('active-link');
     $('#about').removeClass('active-link');
 
@@ -44,25 +82,28 @@ $('#gallery').click(function() {
     $(this).toggleClass('active-link')
 // TRANSITIONS
 appointmentTransition()
-galleryTransition() 
+aboutTransition() 
+galleryTransition()
 // BRINGS UP CURRENT SECTION
-    $('.gallery').toggleClass('active-sect');
+    $('.gallery').addClass('active-sect');
+// MAKES HERO VISIBLE OR NOT 
+heroCheck()
 // REMOVES OTHER SECTION ACTIVES
     $('#appointment').removeClass('active-link');
-    $('#about').removeClass('active-link'); 
-      
+    $('#about').removeClass('active-link');   
 });
 
 $('#about').click(function() {
     $(this).toggleClass('active-link')
 // TRANSITIONS
 appointmentTransition()
-galleryTransition() 
+aboutTransition() 
+galleryTransition()
 // BRINGS UP CURRENT SECTION
-
-$('.about').addClass('active-sect');
+    $('.about').addClass('active-sect');
+// MAKES HERO VISIBLE OR NOT 
+heroCheck()
 // REMOVES OTHER SECTION ACTIVES
-    $('.gallery').removeClass('active-sect');
     $('#appointment').removeClass('active-link');
     $('#gallery').removeClass('active-link');
 });
