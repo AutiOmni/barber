@@ -943,10 +943,15 @@ input[type=radio]:checked + div {
     font-size: 25px;
     cursor: pointer;
     position: absolute;
-    top: 5px;
+    top: 20px;
     right: -30px;
     writing-mode:vertical-rl;
     text-shadow: -2px -2px 1px #000;
+}
+
+.close-cal span {
+    color: #dd5958;
+    margin: 10px;
 }
 
 .close-cal:active {
