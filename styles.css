@@ -225,14 +225,14 @@ li:nth-of-type(3) .active-link:after {
 
 .right-hero {
     overflow: hidden;
-    width: 50%;
+    width: 49.5%;
     height: 100%;
     position: relative;
 }
 
 .left-hero {
     overflow: hidden;
-    width: 50%;
+    width: 49.5%;
     height: 100%;
     position: relative;
 }
