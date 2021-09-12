@@ -1344,6 +1344,10 @@ footer a {
         margin-top: 0px;
     }
 
+    .appointment-img {
+        height: 100%;
+    }
+
 
     .appointment-img img {
         width: 100%;
