@@ -257,7 +257,6 @@ $('#move-gallery-right').on('click', function() {
     var moveGallery = $('.gallery').width()
 
     i++
-    console.log(i)
 
 if ($(window).width() > 700) 
     {
@@ -301,7 +300,6 @@ $('#move-gallery-left').on('click', function() {
     var moveGallery = $('.gallery').width()
 
     i--
-    console.log(i)
 
     if ($(window).width() > 700) 
     {
@@ -339,3 +337,9 @@ $('#move-gallery-left').on('click', function() {
 })
 
 
+// MOBILE BEFORE AFTER TOGGLE
+$('.img-holder').each(function() {
+    $(this).click(function() {
+        $(this).toggleClass('active-gallery-after')
+    })
+})

@@ -494,6 +494,18 @@ li:nth-of-type(3) .active-link:after {
 .img-holder:hover .gallery-after {
     transform: translateY(0%);
 }
+/* ------------------ MOBILE TAP HOVER --------------------------------------------------------- */
+
+.active-gallery-after img:nth-of-type(2) {
+    transform: translateY(0%);
+}
+.active-gallery-after .gallery-before {
+    transform: translateY(100%);
+}
+.active-gallery-after .gallery-after {
+    transform: translateY(0%);
+}
+
 
 
 /* ------------------ APPOINTMENTS SECTION --------------------------------------------------------- */
