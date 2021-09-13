@@ -484,16 +484,6 @@ li:nth-of-type(3) .active-link:after {
     transition: transform ease-in-out 500ms;
 }
 
-.img-holder:hover img:nth-of-type(2) {
-    transform: translateY(0%);
-}
-
-.img-holder:hover .gallery-before {
-    transform: translateY(100%);
-}
-.img-holder:hover .gallery-after {
-    transform: translateY(0%);
-}
 /* ------------------ MOBILE TAP HOVER --------------------------------------------------------- */
 
 .active-gallery-after img:nth-of-type(2) {
@@ -1282,18 +1272,6 @@ footer a {
     font-size: 50px;
     }
 
-/* ------------------ MOBILE HOVER GALLERY FIX ----------------------- */
-
-.img-holder:hover img:nth-of-type(2) {
-    transform: translateY(100%);
-}
-
-.img-holder:hover .gallery-before {
-    transform: translateY(0%);
-}
-.img-holder:hover .gallery-after {
-    transform: translateY(100%);
-}
 
 }
 

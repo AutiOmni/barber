@@ -339,7 +339,9 @@ $('#move-gallery-left').on('click', function() {
 
 // MOBILE BEFORE AFTER TOGGLE
 $('.img-holder').each(function() {
-    $(this).click(function() {
-        $(this).toggleClass('active-gallery-after')
+    $(this).mouseenter(function() {
+        $(this).addClass('active-gallery-after')
+    }).mouseleave(function() {
+        $(this).removeClass('active-gallery-after')
     })
 })
