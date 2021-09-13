@@ -115,7 +115,6 @@ $('#submit').click(function(e) {
 
 })
 
-
 // MODAL FUNCTIONS
 
 $('#service').click(function() {
@@ -129,65 +128,6 @@ $('.service-radio').each(function() {
         $('#service p').html('Service Selected: ' + this.value)
     })
     
-})
-
-// DATE FUNCTIONALITY 
-
-$('#date').click(function() {
-    $('.modal-date-cont').addClass('active-date-modal active-modal');
-})
-
-$('#confirm-date').on('click', function() {
-    convertDate();
-// CHECKS THAT ENTERED DATE IS VALID AND NO PAST
-    const currentDate = new Date;
-    var slicedTime = $('#time').val().slice(0,2);
-    var numTime = parseInt(slicedTime)
-// CHECK FOR CURRENT MONTH OR GREATER
-    if (month < currentDate.getMonth())
-    {
-        alert('Time Travel is dangerous. Please select a date or time in the future.');
-        return convertDate;
-    }
-// CHECK LESS THAN CURRENT DATE
-    if ($('.active-date-reserve').text() < currentDate.getDate())
-    {
-        alert('Time Travel is dangerous. Please select a date or time in the future.');
-        return convertDate;
-    }
-// CHECK FOR SAME DAY TIME
-    if ($('.active-date-reserve').text() == currentDate.getDate() && (numTime <= currentDate.getHours() + 1))
-    {
-        alert('Please select an appointment time that is at least an hour ahead of the current time.');
-        return convertDate;
-    }
-
-        $('.modal-date-cont').removeClass('active-date-modal active-modal');
-    })
-
-    $('.drink-choices').click(function() {
-        $('.modal-drinks-cont').addClass('active-drinks-modal active-modal');
-    })
-
-    $('.drink-radio').each(function() {
-        $(this).click(function() {
-            $('.modal-drinks-cont').removeClass('active-drinks-modal active-modal');
-            $('#drink-choices p').html('Drink: ' + this.value)
-        })
-})
-
-// THIS WILL FIX MOBILE INPUT FOCUS KEYBOARD ISSUE
-
-$('.focused-mobile').each(function() {
-    $(this).blur(function() {
-        $(window).scrollTop(0);
-    })
-})
-
-$('select').each(function() {
-    $(this).on('change', function() {
-        $(window).scrollTop(0)
-    })
 })
 
 // CONVERT DATE AND TIME TO STRING FOR FORM ----------------------------
@@ -243,6 +183,68 @@ function convertDate() {
 // CLOSE CALENDAR ---------------------------------
 $('.close-cal').click(function() {
     $('.modal-date-cont').removeClass('active-date-modal active-modal');
+})
+
+
+// DATE FUNCTIONALITY 
+
+$('#date').click(function() {
+    $('.modal-date-cont').addClass('active-date-modal active-modal');
+})
+// CONFIRM DATE CHECKS ----------------------------------------------
+$('#confirm-date').on('click', function() {
+    convertDate();
+// CHECKS THAT ENTERED DATE IS VALID AND NO PAST
+    const currentDate = new Date;
+    var slicedTime = $('#time').val().slice(0,2);
+    var numTime = parseInt(slicedTime)
+// CHECK FOR CURRENT MONTH OR GREATER
+    if (month < currentDate.getMonth())
+    {
+        alert('Time Travel is dangerous. Please select a date or time in the future.');
+        return convertDate;
+    }
+// CHECK LESS THAN CURRENT DATE
+    if (month == currentDate.getMonth() && $('.active-date-reserve').text() < currentDate.getDate())
+    {
+        alert('Time Travel is dangerous. Please select a date or time in the future.');
+        return convertDate;
+    }
+// CHECK FOR SAME DAY TIME
+    if (month <= currentDate.getMonth() && $('.active-date-reserve').text() == currentDate.getDate() && (numTime <= currentDate.getHours() + 1))
+    {
+        alert('Please select an appointment time that is at least an hour ahead of the current time.');
+        return convertDate;
+    }
+ 
+        $('.modal-date-cont').removeClass('active-date-modal active-modal');
+    })
+
+// OTHER MODALS
+
+    $('.drink-choices').click(function() {
+        $('.modal-drinks-cont').addClass('active-drinks-modal active-modal');
+    })
+
+    $('.drink-radio').each(function() {
+        $(this).click(function() {
+            $('.modal-drinks-cont').removeClass('active-drinks-modal active-modal');
+            $('#drink-choices p').html('Drink: ' + this.value)
+        })
+})
+
+// THIS WILL FIX MOBILE INPUT FOCUS KEYBOARD ISSUE
+
+$('.focused-mobile').each(function() {
+    $(this).blur(function() {
+        $(window).scrollTop(0);
+    })
+})
+
+$('select').each(function() {
+    $(this).on('change', function() {
+        $(window).scrollTop(0)
+    })
 })
 
 // ADJUSTS THE GALLERY FROM USE DEPENDING ON SCREEN SIZE -----------------------
@@ -335,3 +337,5 @@ $('#move-gallery-left').on('click', function() {
            
     }
 })
+
+

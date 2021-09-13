@@ -24,7 +24,7 @@ else if (timeMinutes >= 30)
     timeMinutes = '00';
 }
 
-timeHour = timeHour + 1;
+timeHour = timeHour + 2;
 
 // SET TIME FOR NEXT DAY IF PAST OPEN TIMES
 if (timeHour > 17)

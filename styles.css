@@ -710,6 +710,7 @@ input {
 .modal-date-cont {
     opacity: 0;
     display: none;
+    overflow-y: scroll;
 }
 
 .modal-cont.active-modal {
@@ -720,7 +721,6 @@ input {
     opacity: 1;
     display: block;
 }
-
 
 .drink-modal,
 .service-modal {
