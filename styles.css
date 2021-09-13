@@ -1266,6 +1266,11 @@ footer a {
             font-size: .9rem;
         }
 
+        .arrow-right-cont p,
+    .arrow-left-cont p  {
+    font-size: 50px;
+    }
+
 }
 
 @media (max-width: 700px) {
