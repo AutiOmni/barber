@@ -336,8 +336,9 @@ $('#move-gallery-left').on('click', function() {
     }
 })
 
+// MOBILE BEFORE AFTER TOGGLE --------------------------
 
-// MOBILE BEFORE AFTER TOGGLE
+if ($(window).width() > 850) {
 $('.img-holder').each(function() {
     $(this).mouseenter(function() {
         $(this).addClass('active-gallery-after')
@@ -345,3 +346,12 @@ $('.img-holder').each(function() {
         $(this).removeClass('active-gallery-after')
     })
 })
+} 
+else
+{
+    $('.img-holder').each(function() {
+        $(this).click(function() {
+            $(this).toggleClass('active-gallery-after')
+        })
+    })
+}
