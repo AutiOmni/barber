@@ -534,7 +534,6 @@ li:nth-of-type(3) .active-link:after {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    overflow-x: hidden;
     margin-top: 10px;
 }
 
@@ -683,11 +682,12 @@ input {
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 95%;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
     transition: all ease-in-out 500ms;
     z-index: 99;
+    border-radius: 5px;
 }
 
 .modal-service-cont {
@@ -1327,7 +1327,7 @@ footer a {
         margin-left: 5%;
     }
 
-        /*------------------FORM----------------------- */
+        /*------------------APPOINTMENT----------------------- */
 
     .form-title {
         color: #fff; 
@@ -1353,6 +1353,10 @@ footer a {
         height: 100%;
     }
 
+    .modal-cont {
+        height: 100%;
+    }
+
 
     .appointment-img img {
         width: 100%;
@@ -1364,10 +1368,7 @@ footer a {
         .drink-modal-title {
             color: #000;
     }
-
-        .profile-pic img {
-            height: 85%;
-        }
+  
 
     /* ------------------ ABOUT ----------------------- */
 
@@ -1382,6 +1383,10 @@ footer a {
             grid-column:1/2;
             align-self: center;
             justify-self: center;
+        }
+
+        .profile-pic img {
+            height: 85%;
         }
 
         .profile-pic {
