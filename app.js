@@ -8,7 +8,7 @@ function appointmentTransition() {
             $('.appointment').removeClass('active-sect')
             $('.appointment').removeClass('active-bye')
     
-         },500)
+         }, 500)
        } 
     }
 
@@ -20,7 +20,7 @@ function aboutTransition() {
             setTimeout(() => {
                 $('.about').removeClass('active-sect')
                 $('.about').removeClass('active-bye')
-            },500)
+            }, 500)
         }
     }
 
@@ -28,10 +28,9 @@ function galleryTransition() {
 
         if ($('.gallery').hasClass('active-sect')) {
             // THIS IS FOR STYLISTIC REMOVAL OF SECTION
-            $('.gallery').addClass('active-bye')
             setTimeout(() => {
                 $('.gallery').removeClass('active-sect')
-            },250)
+            }, 500)
         }
     }
 
@@ -335,6 +334,7 @@ $('#move-gallery-left').on('click', function() {
            
     }
 })
+
 
 // MOBILE BEFORE AFTER TOGGLE --------------------------
 
