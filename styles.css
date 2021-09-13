@@ -148,8 +148,8 @@ li:first-of-type:hover a:before {
 
 li:nth-of-type(1) a:after {
     position: absolute;
-    content: url(svgs/scissorsService.svg);
-    right: -10px;
+    content: url(svgs/scissors.svg);
+    right: -17px;
     opacity: 0;
     transition: all ease 250ms;
     transition-delay: 0ms;
