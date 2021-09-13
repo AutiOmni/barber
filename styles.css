@@ -746,6 +746,7 @@ input {
     transform: translate(-50%, -50%);
     border-radius: 5px;
     overflow-y: scroll;
+    border: 1px solid #000;
 }
 
 .date-modal {
