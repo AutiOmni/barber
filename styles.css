@@ -1445,7 +1445,14 @@ footer a {
 
     /* ------------------ HERO ----------------------- */
 
+        .hero-ten img {
+            object-position: left;
+        }
 
+        .hero-six img {
+            object-position: left;
+        }
+        
     
         
 }
