@@ -271,57 +271,57 @@ li:nth-of-type(3) .active-link:after {
 }
 .hero-three {
     transition: transform ease-in-out 1000ms;
-    transform: translate(-100%, 0%);
+    transform: translate(0%, -100%);
     opacity: 1;
 }
 
 .hero-four {    
     transition: transform ease-in-out 1000ms;
-    transform: translate(100%, 0%);
+    transform: translate(0%, 100%);
     opacity: 1;
 }
 
 .hero-five {
     transition: transform ease-in-out 1000ms;
-    transform: translate(0%, -100%);
+    transform: translate(100%, 0%);
     opacity: 1;
 }
 .hero-six {
     transition: transform ease-in-out 1000ms;
-    transform: translate(0%, 100%);
+    transform: translate(-100%, 0%);
     opacity: 1;
 }
 
 .hero-seven {
     transition: transform ease-in-out 1000ms;
-    transform: translate(100%, 0%);
-    opacity: 1;
-}
-.hero-eight {
-    transition: transform ease-in-out 1000ms;
-    transform: translate(-100%, 0%);
-    opacity: 1;
-}
-
-.hero-nine {
-    transition: transform ease-in-out 1000ms;
     transform: translate(0%, 100%);
     opacity: 1;
 }
-.hero-ten {
+.hero-eight {
     transition: transform ease-in-out 1000ms;
     transform: translate(0%, -100%);
     opacity: 1;
 }
 
-.hero-eleven {
+.hero-nine {
+    transition: transform ease-in-out 1000ms;
+    transform: translate(100%, 0%);
+    opacity: 1;
+}
+.hero-ten {
     transition: transform ease-in-out 1000ms;
     transform: translate(-100%, 0%);
     opacity: 1;
 }
+
+.hero-eleven {
+    transition: transform ease-in-out 1000ms;
+    transform: translate(0%, 100%);
+    opacity: 1;
+}
 .hero-twelve {
     transition: transform ease-in-out 1000ms;
-    transform: translate(100%, 0%);
+    transform: translate(0%, -100%);
     opacity: 1;
 }
 
