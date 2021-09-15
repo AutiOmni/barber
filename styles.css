@@ -1456,6 +1456,10 @@ footer a {
         .hero-four img {
             object-position: -25px center;
         }
+
+        .hero-four img {
+            object-position: right;
+        }
         
     
         
