@@ -1449,12 +1449,8 @@ footer a {
             object-position: left;
         }
 
-        .hero-eight img {
-            object-position: -125px center;
-        }
-
         .hero-six img {
-            object-position: -25px center;
+            object-position: -50px center;
         }
 
         .hero-four img {
