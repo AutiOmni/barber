@@ -1445,11 +1445,11 @@ footer a {
 
     /* ------------------ HERO ----------------------- */
 
-        .hero-ten img {
+        .hero-six img {
             object-position: left;
         }
 
-        .hero-six img {
+        .hero-eleven img {
             object-position: -100px center;
         }
 
@@ -1460,9 +1460,7 @@ footer a {
         .hero-three img {
             object-position: right;
         }
-        
-    
-        
+          
 }
 
 @media (max-width: 400px) {
