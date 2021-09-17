@@ -453,6 +453,7 @@ li:nth-of-type(3) .active-link:after {
     overflow: hidden;
     position: relative;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .img-holder p {
