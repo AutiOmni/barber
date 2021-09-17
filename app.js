@@ -335,8 +335,18 @@ $('#move-gallery-left').on('click', function() {
     }
 })
 
+// KEEPS GALLERY IN CHECK FOR RESIZE 
+$(window).resize(function() {
+    $('.gallery-holder').css('transform', 'translateX(0%)')
+    $('#move-gallery-left').css('display', 'none')
+    $('#move-gallery-right').css('display', 'flex')
+
+    i = 0;
+})
 
 // MOBILE BEFORE AFTER TOGGLE --------------------------
+
+
 
 if ($(window).width() > 850) {
 $('.img-holder').each(function() {
