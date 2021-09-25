@@ -1,1 +1,3 @@
-https://autiomni.github.io/barber/
+Barber Site for Hoppy Barber
+
+https://omniauti.github.io/barber/
