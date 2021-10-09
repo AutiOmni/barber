@@ -880,6 +880,39 @@ input[type=radio] {
     justify-content: center;
     margin: 5px 0px;
     transition: all ease-in-out 250ms;
+    position: relative;
+}
+
+.drink-box p,
+    root-beer p {
+    position: relative;
+}
+
+
+.drink-box p::after {
+    content: url('svgs/hop.svg');
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: -30px;
+    top: -5px;
+    transition: all ease-in-out 500ms;
+    opacity: 0;
+}
+
+.root-beer p::after {
+    content: url('svgs/root.svg');
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: -30px;
+    top: -5px;
+    transition: all ease-in-out 500ms;
+    opacity: 0;
+}
+
+.drink-box:hover p::after {
+    opacity: 1;
 }
 
 .service-box:active,
@@ -895,6 +928,12 @@ input[type=radio] {
 input[type=radio]:checked + div {
     box-shadow: 0px 1px 10px #000;
 }
+
+input[type=radio]:checked + div p:after {
+    opacity: 1;
+}
+
+
 
 .service-radio-label {
     -webkit-tap-highlight-color: transparent;
