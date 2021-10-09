@@ -1522,7 +1522,7 @@ footer a {
             width: 25px;
             left: 50%;
             transform: translateX(-50%);
-            top: -20px;
+            top: -25px;
             transition: all ease-in-out 500ms;
             opacity: 0;
         }
@@ -1534,7 +1534,7 @@ footer a {
             width: 25px;
             left: 50%;
             transform: translateX(-50%);
-            top: -20px;
+            top: -25px;
         }
           
 }
