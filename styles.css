@@ -1415,6 +1415,10 @@ footer a {
         text-shadow: -1px -1px 1px #000;
     }
 
+    form {
+        height: 100%;
+    }
+
     .appointment-form,
         .appointment-img {
         grid-column: 1/3;
