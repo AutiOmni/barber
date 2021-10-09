@@ -15,7 +15,8 @@ html,
 }
 
 body {
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     transform: translateY(0px);
 }
 
@@ -333,8 +334,8 @@ li:nth-of-type(3) .active-link:after {
 
 .about {
     height: 100%;
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     position: absolute;
     transform: translateY(500%);
     transition: all ease 750ms;
@@ -384,8 +385,8 @@ li:nth-of-type(3) .active-link:after {
 /* -------------------------- GALLERY SECTION ----------------------------------------------------- */
 
 .gallery {
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     opacity: 0;  
     transform: translateY(500%); 
     transition: all ease 750ms;
@@ -509,8 +510,8 @@ li:nth-of-type(3) .active-link:after {
 
 .appointment {
     height: 100%;
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     position: absolute;
     transform: translateY(500%);
     display: grid;
@@ -602,8 +603,8 @@ input {
     font-size: 1.25rem;
     font-family: 'Raleway', sans-serif;
     width: 49%;
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     border: 1px solid #000;
     border-radius: 5px; 
     text-align: center;
@@ -616,8 +617,8 @@ input {
     font-size: 1.25rem;
     border-radius: 5px;
     border: 1px solid #000;
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     cursor: pointer;
 
 }
@@ -629,8 +630,8 @@ input {
     font-size: 1.25rem;
     border-radius: 5px;
     border: 1px solid #000;
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     cursor: pointer;
     text-align: center;
 
@@ -743,8 +744,8 @@ input {
 .service-modal {
     width: 95%;
     height: 90%;
-    background-color: #fff;
-    background-image:url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -998,8 +999,8 @@ input[type=radio]:checked + div p:after {
 #month, #time {
     font-size: 25px;
     text-align: center;
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
     border:none;
     width:45%; 
 }
@@ -1035,8 +1036,8 @@ input[type=radio]:checked + div p:after {
     display: flex;
     width: 100%;
     padding: 5px 0px;
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
 }
 
 .weekday-holder div {
@@ -1064,8 +1065,8 @@ input[type=radio]:checked + div p:after {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: #fff;
-    background-image: url(imgs/clean-textile.png);
+    background-color: #f6f9ff;
+    background-image: url(imgs/mirrored-squares.png);
 }
 
 .day-pre-cont {
