@@ -679,7 +679,7 @@ input {
 }
 
 .calendar::before {
-    content: url(svgs/calendar.svg);
+    content: url(svgs/schedule.svg);
     position: absolute;
     height: 35px;
     width: 35px;
