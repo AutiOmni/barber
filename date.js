@@ -55,7 +55,7 @@ dateSelect.addEventListener('change', () => {
 // FIND FIRST DAY OF THE MONTH ------------------------
 function startMonthDay(m, y, callback) {
     // START OF YEAR DAY
-    let startWeekDay = 5;
+    let startWeekDay = 6;
     // MONTH DAYS SUM
     const monthDayArr = [31,28,31,30,31,30,31,31,30,31,30,31];
     // LEAP YEAR CHECK
