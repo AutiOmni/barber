@@ -58,13 +58,9 @@ function startMonthDay(m, y, callback) {
     let startWeekDay = 6;
     // MONTH DAYS SUM
     const monthDayArr = [31,28,31,30,31,30,31,31,30,31,30,31];
-    // LEAP YEAR CHECK
-    if (y % 4 == 0) 
-    {
-        monthDayArr[1] = 29;
-    }
+
     // SLICE AND ADD MONTH 
-    if (m > 1) {
+    if (m > 0) {
 
         let compileMonthLength = monthDayArr.slice(0, m).reduce((a,b) => a + b);
      // RUN THROUGH MONTHS TO  GET FIRST DAY OF SELECTED MONTH -------------
